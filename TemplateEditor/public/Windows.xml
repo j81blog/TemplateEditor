@@ -1,0 +1,5929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <SupportedOS>
+    <OS>
+      <Tag>Windows11</Tag>
+      <Name>Windows 11</Name>
+      <Abbreviation>W11</Abbreviation>
+      <ServerOS>0</ServerOS>
+      <Builds>
+        <BuildStartsWith>21</BuildStartsWith>
+        <BuildStartsWith>26</BuildStartsWith>
+      </Builds>
+    </OS>
+    <OS>
+      <Tag>Windows10</Tag>
+      <Name>Windows 10</Name>
+      <Abbreviation>W10</Abbreviation>
+      <ServerOS>0</ServerOS>
+      <Builds>
+        <BuildStartsWith>190</BuildStartsWith>
+      </Builds>
+    </OS>
+    <OS>
+      <Tag>Server2025</Tag>
+      <Name>Windows Server 2025</Name>
+      <Abbreviation>WS2025</Abbreviation>
+      <ServerOS>1</ServerOS>
+      <Builds>
+        <BuildStartsWith>26100</BuildStartsWith>
+      </Builds>
+    </OS>
+    <OS>
+      <Tag>Server2022</Tag>
+      <Name>Windows Server 2022</Name>
+      <Abbreviation>WS2022</Abbreviation>
+      <ServerOS>1</ServerOS>
+      <Builds>
+        <BuildStartsWith>20348</BuildStartsWith>
+      </Builds>
+    </OS>
+    <OS>
+      <Tag>Server2019</Tag>
+      <Name>Windows Server 2019</Name>
+      <Abbreviation>WS2019</Abbreviation>
+      <ServerOS>1</ServerOS>
+      <Builds>
+        <BuildStartsWith>17763</BuildStartsWith>
+      </Builds>
+    </OS>
+  </SupportedOS>
+  <Item>
+    <Name>Remove Administrative Tools from Default Profile</Name>
+    <Description>Removes the Administrative Tools shortcut from the Default user profile to prevent it from being copied to new user profiles.</Description>
+    <Type>FileFolder</Type>
+    <Category>CleanupDefaultProfile</Category>
+    <Order>50</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <FileFolder>
+      <Path>C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools.lnk</Path>
+      <Action>Remove</Action>
+      <ItemType>File</ItemType>
+      <NewName></NewName>
+    </FileFolder>
+  </Item>
+  <Item>
+    <Name>Remove Maintenance from Default Profile</Name>
+    <Description>Removes the Maintenance folder from the Default user profile to prevent it from being copied to new user profiles.</Description>
+    <Type>FileFolder</Type>
+    <Category>CleanupDefaultProfile</Category>
+    <Order>50</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <FileFolder>
+      <Path>C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Maintenance</Path>
+      <Action>Remove</Action>
+      <ItemType>Folder</ItemType>
+      <NewName></NewName>
+    </FileFolder>
+  </Item>
+  <Item>
+    <Name>Remove System Tools from Default Profile</Name>
+    <Description>Removes the System Tools folder from the Default user profile to prevent it from being copied to new user profiles.</Description>
+    <Type>FileFolder</Type>
+    <Category>CleanupDefaultProfile</Category>
+    <Order>50</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <FileFolder>
+      <Path>C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools</Path>
+      <Action>Remove</Action>
+      <ItemType>Folder</ItemType>
+      <NewName></NewName>
+    </FileFolder>
+  </Item>
+  <Item>
+    <Name>Clipchamp - Video Editor</Name>
+    <Description>Clipchamp - Video Editor</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Clipchamp.Clipchamp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Cortana</Name>
+    <Description>Remove the Cortana UWP App</Description>
+    <Type>StoreApp</Type>
+    <Category>Miscellaneous</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.549981C3F5F10</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft News</Name>
+    <Description>Microsoft News</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.BingNews</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft Todo</Name>
+    <Description>Microsoft Todo</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Todos</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.BingWeather</Name>
+    <Description>Microsoft.BingWeather</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.BingWeather</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.GamingApp</Name>
+    <Description>Microsoft.GamingApp</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.GamingApp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.GetHelp</Name>
+    <Description>Microsoft.GetHelp</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.GetHelp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Getstarted</Name>
+    <Description>Microsoft.Getstarted</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Getstarted</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.HEIFImageExtension</Name>
+    <Description>Adds support for High Efficiency Image File (HEIF) format, usually with .heif extension.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.HEIFImageExtension</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Microsoft3DViewer</Name>
+    <Description>Microsoft.Microsoft3DViewer</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Microsoft3DViewer</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.MicrosoftOfficeHub</Name>
+    <Description>Microsoft.MicrosoftOfficeHub</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.MicrosoftOfficeHub</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.MicrosoftSolitaireCollection</Name>
+    <Description>Microsoft.MicrosoftSolitaireCollection</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.MicrosoftSolitaireCollection</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.MicrosoftStickyNotes</Name>
+    <Description>Microsoft.MicrosoftStickyNotes</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.MicrosoftStickyNotes</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.MixedReality.Portal</Name>
+    <Description>Provides access to mixed reality games and VR experiences.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.MixedReality.Portal</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.MSPaint</Name>
+    <Description>Microsoft.MSPaint</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.MSPaint</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Office.OneNote</Name>
+    <Description>Microsoft.Office.OneNote</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Office.OneNote</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.People</Name>
+    <Description>Microsoft.People</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.People</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.ScreenSketch</Name>
+    <Description>Removes "Snip &amp; Sketch" application. Provides functionality of Snipping Tool with additional improvements.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.ScreenSketch</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.SkypeApp</Name>
+    <Description>Microsoft.SkypeApp</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.SkypeApp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.StorePurchaseApp</Name>
+    <Description>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.StorePurchaseApp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.VP9VideoExtensions</Name>
+    <Description>Adds support for video codec VP9 (part of WebM project by Google)
+
+Note: This is required to support HDR video streaming</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.VP9VideoExtensions</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Wallet</Name>
+    <Description>Microsoft.Wallet</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Wallet</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WebMediaExtensions</Name>
+    <Description>Microsoft.WebMediaExtensions</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WebMediaExtensions</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WebpImageExtension</Name>
+    <Description>Adds support for image format WebP.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WebpImageExtension</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Windows.Photos</Name>
+    <Description>Microsoft.Windows.Photos</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Windows.Photos</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsAlarms</Name>
+    <Description>Microsoft.WindowsAlarms</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsAlarms</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsCalculator</Name>
+    <Description>Built-in Windows Calculator. If your users are using it (mostly desktop sessions rather than published applications), do not remove it unless you have a replacement calculator app.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsCalculator</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsCamera</Name>
+    <Description>Microsoft.WindowsCamera</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsCamera</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsCommunicationsApps</Name>
+    <Description>Disable Windows Mail and Calendar functionality</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>microsoft.windowscommunicationsapps</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsFeedbackHub</Name>
+    <Description>Microsoft.WindowsFeedbackHub</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsFeedbackHub</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsMaps</Name>
+    <Description>Microsoft.WindowsMaps</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsMaps</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsSoundRecorder</Name>
+    <Description>Microsoft.WindowsSoundRecorder</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsSoundRecorder</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.WindowsStore</Name>
+    <Description>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.WindowsStore</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.Xbox.TCUI</Name>
+    <Description>Microsoft.Xbox.TCUI</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.Xbox.TCUI</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.XboxApp</Name>
+    <Description>Microsoft.XboxApp</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.XboxApp</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.XboxGameOverlay</Name>
+    <Description>Microsoft.XboxGameOverlay</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.XboxGameOverlay</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.XboxGamingOverlay</Name>
+    <Description>Microsoft.XboxGamingOverlay</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.XboxGamingOverlay</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.XboxIdentityProvider</Name>
+    <Description>Microsoft.XboxIdentityProvider</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.XboxIdentityProvider</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.XboxSpeechToTextOverlay</Name>
+    <Description>Microsoft.XboxSpeechToTextOverlay</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.XboxSpeechToTextOverlay</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.YourPhone</Name>
+    <Description>Provides access to remotely send text messages or access images on Android-based phone.</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.YourPhone</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.ZuneMusic</Name>
+    <Description>Microsoft.ZuneMusic</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.ZuneMusic</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Microsoft.ZuneVideo</Name>
+    <Description>Microsoft.ZuneVideo</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.ZuneVideo</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Outlook (new)</Name>
+    <Description>The new Outlook app</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>Microsoft.OutlookForWindows</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>Quick Assist</Name>
+    <Description>Quick Assist</Description>
+    <Type>StoreApp</Type>
+    <Category>RemoveApplications</Category>
+    <Order>60</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <StoreApp>
+      <Name>MicrosoftCorporationII.QuickAssist</Name>
+    </StoreApp>
+  </Item>
+  <Item>
+    <Name>AllJoyn Router Service</Name>
+    <Description>Routes AllJoyn messages for the local AllJoyn clients.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>AJRouter</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Application Layer Gateway Service</Name>
+    <Description>Provides support for 3rd party protocol plug-ins for Internet Connection Sharing.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>ALG</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>AVCTP service</Name>
+    <Description>This is Audio Video Control Transport Protocol service</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>BthAvctpSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>BitLocker Drive Encryption Service</Name>
+    <Description>BDESVC hosts the BitLocker Drive Encryption service. BitLocker Drive Encryption provides secure startup for the operating system, as well as full volume encryption for OS, fixed or removable volumes. This service allows BitLocker to prompt users for various actions related to their volumes when mounted, and unlocks volumes automatically without user interaction. Additionally, it stores recovery information to Active Directory, if available, and, if necessary, ensures the most recent recovery certificates are used.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>BDESVC</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Block Level Backup Engine Service</Name>
+    <Description>The WBENGINE service is used by Windows Backup to perform backup and recovery operations.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>wbengine</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Bluetooth Audio Gateway Service</Name>
+    <Description>Service supporting the audio gateway role of the Bluetooth Handsfree Profile.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>BTAGService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Bluetooth Support Service</Name>
+    <Description>The Bluetooth service supports discovery and association of remote Bluetooth devices.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>bthserv</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>BranchCache</Name>
+    <Description>This service caches network content from peers on the local subnet.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>PeerDistSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Cellular Time service</Name>
+    <Description>This service sets time based on NITZ messages from a Mobile Network.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>autotimesvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Connected User Experiences and Telemetry</Name>
+    <Description>The Connected User Experiences and Telemetry service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.
+
+NOTE: Stopping this service prevents Microsoft Defender ATP from working properly.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>DiagTrack</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Contact Data</Name>
+    <Description>Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>PimIndexMaintenanceSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Data Usage</Name>
+    <Description>Network data usage, data limit, restrict background data, metered networks.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>DusmSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Diagnostic Execution Service</Name>
+    <Description>Diagnostic Execution Service</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>DiagSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Diagnostic Policy Service</Name>
+    <Description>The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>DPS</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Diagnostic Service Host</Name>
+    <Description>The Diagnostic Service Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local Service context.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>WdiServiceHost</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Diagnostic System Host</Name>
+    <Description>The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>WdiSystemHost</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Distributed Link Tracking Client</Name>
+    <Description>Maintains links between NTFS files within a computer or across computers in a network domain.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>TrkWks</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Downloaded Maps Manager</Name>
+    <Description>Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>MapsBroker</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Encrypting File System (EFS)</Name>
+    <Description>Provides the core file encryption technology used to store encrypted files on NTFS file system volumes.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>EFS</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Fax</Name>
+    <Description>Enables you to send and receive faxes, utilizing fax resources available on this computer or on the network.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>Fax</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Function Discovery Provider Host</Name>
+    <Description>The FDPHOST service hosts the Function Discovery (FD) network discovery providers. These FD providers supply network discovery services for the Simple Services Discovery Protocol (SSDP) and Web Services – Discovery (WS-D) protocol. Stopping or disabling the FDPHOST service will disable network discovery for these protocols when using FD. When this service is unavailable, network services using FD and relying on these discovery protocols will be unable to find network devices or resources.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>fdPHost</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Function Discovery Resource Publication</Name>
+    <Description>Publishes this computer and resources attached to this computer so they can be discovered over the network.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>FDResPub</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>GameDVR and Broadcast user service</Name>
+    <Description>This user service is used for Game Recordings and Live Broadcasts</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>BcastDVRUserService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Geolocation Service</Name>
+    <Description>This service monitors the current location of the system and manages geofences (a geographical location with associated events).
+If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>lfsvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Internet Connection Sharing (ICS)</Name>
+    <Description>Provides network address translation, addressing, name resolution and/or intrusion prevention services for a home or small office network.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>SharedAccess</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>MessagingService</Name>
+    <Description>Service supporting text messaging and related functionality.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>MessagingService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Microsoft Windows SMS Router Service</Name>
+    <Description>Routes messages based on rules to appropriate clients.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>SmsRouter</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>MS Edge - Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)</Name>
+    <Description>Keeps Microsoft Edge up to update. If this service is disabled, the application will not be kept up to date.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+    </OS>
+    <Service>
+      <Name>MicrosoftEdgeElevationService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>MS Edge - Microsoft Edge Update Service (edgeupdate)</Name>
+    <Description>Keeps your Microsoft software up to date. If this service is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This service uninstalls itself when there is no Microsoft software using it.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <Service>
+      <Name>edgeupdate</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>MS Edge - Microsoft Edge Update Service (edgeupdatem)</Name>
+    <Description>Keeps your Microsoft software up to date. If this service is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This service uninstalls itself when there is no Microsoft software using it.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <Service>
+      <Name>edgeupdatem</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Offline Files</Name>
+    <Description>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>CscService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Offline Files Driver</Name>
+    <Description>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>CSC</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>OneCore capture service</Name>
+    <Description>Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>CaptureService</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>OneSync Service</Name>
+    <Description>This (per-user) service synchronizes mail, contacts, calendar and various other user data.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>OneSyncSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Optimize drives</Name>
+    <Description>Helps the computer run more efficiently by optimizing files on storage drives.
+
+NOTE:Disabling this service prevents defragmentation (UI) from working.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>defragsvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Parental Controls</Name>
+    <Description>Enforces parental controls for child accounts in Windows. If this service is stopped or disabled, parental controls may not be enforced.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>WpcMonSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Payments and NFC/SE Manager</Name>
+    <Description>Manages payments and Near Field Communication (NFC) based secure elements.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>SEMgrSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Retail Demo Service</Name>
+    <Description>The Retail Demo service controls device activity while the device is in retail demo mode.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>RetailDemo</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Secure Socket Tunneling Protocol Service</Name>
+    <Description>Provides support for the Secure Socket Tunneling Protocol (SSTP) to connect to remote computers using VPN.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>SstpSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Sensor Monitoring Service</Name>
+    <Description>Monitors various sensors in order to expose data and adapt to system and user state.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>SensrSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Shared PC Account Manager</Name>
+    <Description>Manages profiles and accounts on a SharedPC configured device</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>shpamsvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Shell Hardware Detection</Name>
+    <Description>Provides notifications for AutoPlay hardware events.
+
+NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD writers) and can also cause event log entries by AppX packages.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>ShellHWDetection</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>SSDP Discovery</Name>
+    <Description>Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>SSDPSRV</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Superfetch</Name>
+    <Description>Maintains and improves system performance over time. If optimizing a persistent machine you may leave Superfetch enabled. If optimizing a non-persistent machine, disable it.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <Service>
+      <Name>SysMain</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Themes</Name>
+    <Description>Provides user experience theme management. Disabling Themes will impact the user experience, but can help with server density.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Server2019>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>Themes</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Update Orchestrator Service</Name>
+    <Description>Update Orchestrator service, manages Windows Updates. If stopped, your devices will not be able to download and install the latest updates.</Description>
+    <Type>Service</Type>
+    <Category>Miscellaneous</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>UsoSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>UPnP Device Host</Name>
+    <Description>Allows UPnP devices to be hosted on this computer.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>upnphost</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Volumetric Audio Compositor Service</Name>
+    <Description>Hosts spatial analysis for Mixed Reality audio simulation.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>VacSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Windows Connect Now - Config Registrar</Name>
+    <Description>WCNCSVC hosts the Windows Connect Now Configuration which is Microsoft's Implementation of Wi-Fi Protected Setup (WPS) protocol. This is used to configure Wireless LAN settings for an Access Point (AP) or a Wi-Fi Device. The service is started programmatically as needed.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>wcncsvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Windows Error Reporting Service</Name>
+    <Description>Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. Disable it if logs are not being gathered and analyzed.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+    </OS>
+    <Service>
+      <Name>WerSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Windows Media Player Network Sharing Service</Name>
+    <Description>Shares Windows Media Player libraries to other networked players and media devices using Universal Plug and Play.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>WMPNetworkSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Windows Mobile Hotspot Service</Name>
+    <Description>Provides the ability to share a cellular data connection with another device.
+Recommended by Microsoft to disable: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>icssvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Windows Search</Name>
+    <Description>Provides content indexing, property caching, and search results for files, e-mail, and other content. Consider disabling it as it has a high impact on server density.
+NOTE: Do not disable if you want to enable search for example in Outlook.</Description>
+    <Type>Service</Type>
+    <Category>OptionalComponents</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Service>
+      <Name>WSearch</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>WLAN AutoConfig</Name>
+    <Description>The WLANSVC service provides the logic required to configure, discover, connect to, and disconnect from a wireless local area network (WLAN) as defined by IEEE 802.11 standards. It also contains the logic to turn your computer into a software access point so that other devices or computers can connect to your computer wirelessly using a WLAN adapter that can support this.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>WlanSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>WWAN AutoConfig</Name>
+    <Description>This service manages mobile broadband (GSM and CDMA) data card/embedded module adapters and connections by auto-configuring the networks. It is strongly recommended that this service be kept running for best user experience of mobile broadband devices.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>WwanSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Xbox Accessory Management Service</Name>
+    <Description>This service manages connected Xbox Accessories.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>XboxGipSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Xbox Live Auth Manager</Name>
+    <Description>Provides authentication and authorization services for interacting with Xbox Live.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>XblAuthManager</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Xbox Live Game Save</Name>
+    <Description>This service syncs save data for Xbox Live save enabled games.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>XblGameSave</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Xbox Live Networking Service</Name>
+    <Description>This service supports the Windows.Networking.XboxLive application programming interface.</Description>
+    <Type>Service</Type>
+    <Category>DisableServices</Category>
+    <Order>70</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Service>
+      <Name>XboxNetApiSvc</Name>
+      <Action>Disabled</Action>
+    </Service>
+  </Item>
+  <Item>
+    <Name>Cellcore Trace</Name>
+    <Description>The “Cellcore” trace has “SMSRouter” in the trace properties.
+https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Cloud Experience Host Trace</Name>
+    <Description>A log generated by the Diagnostic Policy Service.
+DPS enables problem detection, troubleshooting and resolution for Windows components.
+If this service is stopped, diagnostics will no longer function”.
+https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\DiagLog</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Continuous Startup Trace</Name>
+    <Description>This is a startup trace that runs all the time, with these loggers: "Microsoft-Windows-Kernel-PnP":0x48000:0x4
+"Microsoft-Windows-Kernel-WDI":0x100000000:0xff
+"Microsoft-Windows-Wininit":0x20000:0x4
+"Microsoft-Windows-Kernel-BootDiagnostics":0xffffffffffffffff:0x4
+"Microsoft-Windows-Kernel-Power":0x1:0x4
+"Microsoft-Windows-Winlogon":0x20000:0x4
+"Microsoft-Windows-Shell-Core":0x6000000:0x4
+On a clean state VM, this trace is running and using a very small amount of resources.  Current buffers are 4, buffer size is 16.  Those numbers reflect the amount of physical RAM reserved for this trace.  Because the VM does not use WLAN, AKA “wireless”, this trace is doing nothing for my VM now, and will not as long as I do not use wireless.  Therefore the recommendation to disable this trace and free these resources.
+https://docs.microsoft.com/en-us/windows-hardware/drivers/network/wifi-universal-driver-model</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WDIContextLog</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Cortana (Turn off)</Name>
+    <Description>Turn off Cortana.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>AllowCortana</Name>
+      <Path>SOFTWARE\Policies\Microsoft\Windows\Windows Search</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>DWord</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>DeleteUserAppContainersOnLogoff</Name>
+    <Description>When new user logs in to Windows OS, new per-user firewall rules are created. These rules are not deleted when user logs off.
+
+This can have significant impact on performance.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>DeleteUserAppContainersOnLogoff</Name>
+      <Path>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy</Path>
+      <Action>SetValue</Action>
+      <Value>1</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable Automatic Maintenance</Name>
+    <Description>When you are not using your PC, Windows 10 performs automatic maintenance. It is a daily scheduled task that runs out-of-the-box. When enabled, it performs various tasks like app updates, Windows updates, security scans and many other things.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>MaintenanceDisabled</Name>
+      <Path>SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance</Path>
+      <Action>SetValue</Action>
+      <Value>1</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable background auto-layout</Name>
+    <Description>Disabling background auto-layout can help improve EWF performance.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>EnableAutoLayout</Name>
+      <Path>SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable background disk defragmentation</Name>
+    <Description>Disabling background disk defragmentation can help improve EWF performance.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Enable</Name>
+      <Path>SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction</Path>
+      <Action>SetValue</Action>
+      <Value>N</Value>
+      <Type>String</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable default system screensaver</Name>
+    <Description>Disable default system logon screensaver.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKU</Hive>
+      <Name>ScreenSaveActive</Name>
+      <Path>.DEFAULT\Control Panel\Desktop</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable Hibernate</Name>
+    <Description>Disable Hibernate.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>HibernateEnabled</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\Power</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable memory dump creation</Name>
+    <Description>Disable memory dump creation.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>CrashDumpEnabled</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\CrashControl</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable NTFS last access timestamps</Name>
+    <Description>If you are using NTFS, you can increase the performance of EWF by disabling the last access date/time stamps. (CTX338425)</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>NtfsDisableLastAccessUpdate</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\FileSystem</Path>
+      <Action>SetValue</Action>
+      <Value>80000001</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable Storage Sense</Name>
+    <Description>Disable Storage Sense.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>AllowStorageSenseGlobal</Name>
+      <Path>SOFTWARE\Policies\Microsoft\Windows\StorageSense</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable the Windows First Logon Animation</Name>
+    <Description>Disable the Windows First Logon Animation.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>EnableFirstLogonAnimation</Name>
+      <Path>SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Disable Windows Customer Experience Improvement program</Name>
+    <Description>Disable Windows Customer Experience Improvement program.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>CEIPEnable</Name>
+      <Path>SOFTWARE\Microsoft\SQMClient\Windows</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Hide hard error messages</Name>
+    <Description>Disable system hard error messages.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>ErrorMode</Name>
+      <Path>System\CurrentControlSet\Control\Windows</Path>
+      <Action>SetValue</Action>
+      <Value>2</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Increase Disk I/O Timeout to 200 seconds</Name>
+    <Description>Increase Disk I/O Timeout to 200 seconds.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>TimeOutValue</Name>
+      <Path>SYSTEM\CurrentControlSet\Services\Disk</Path>
+      <Action>SetValue</Action>
+      <Value>0x000000C8</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Microsoft NFC devices Trace</Name>
+    <Description>Microsoft NFC devices, one function of which is to enable 'Airplane Mode'.
+This functionality covers Wi-Fi and GPS devices.
+https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>MS Edge - ActiveSetup</Name>
+    <Description>Remove the ActiveSetup value</Description>
+    <Type>Registry</Type>
+    <Category>OptionalComponents</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>StubPath</Name>
+      <Path>SOFTWARE\Microsoft\Active Setup\Installed Components\{9459C573-B17A-45AE-9F64-1857B5D58CEE}</Path>
+      <Action>DeleteValue</Action>
+      <Value></Value>
+      <Type></Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>MS Edge - ActiveSetup (WOW6432)</Name>
+    <Description>Remove the ActiveSetup value</Description>
+    <Type>Registry</Type>
+    <Category>OptionalComponents</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>StubPath</Name>
+      <Path>SOFTWARE\Wow6432Node\Microsoft\Active Setup\Installed Components\{9459C573-B17A-45AE-9F64-1857B5D58CEE}</Path>
+      <Action>DeleteValue</Action>
+      <Value></Value>
+      <Type></Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>MS Edge - Allow installation default Registry</Name>
+    <Description>You can specify the default behavior of all channels to allow or block Microsoft Edge updates when Microsoft Edge Update is used.
+(0) Installs disabled
+(1) Always allow installs
+(4) Always allow Machine-Wide</Description>
+    <Type>Registry</Type>
+    <Category>OptionalComponents</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>InstallDefault</Name>
+      <Path>Software\Policies\Microsoft\EdgeUpdate</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>MS Edge - Update policy override default Registry</Name>
+    <Description>Lets you specify the default behavior for all channels concerning the way Microsoft Edge Update handles available updates for Microsoft Edge.
+(0) Updates disabled
+(1) Always allow updates
+(2) Manual updates only
+(3) Automatic silent updates only</Description>
+    <Type>Registry</Type>
+    <Category>OptionalComponents</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>UpdateDefault</Name>
+      <Path>Software\Policies\Microsoft\EdgeUpdate</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>ReadyBoot Trace</Name>
+    <Description>“ReadyBoot is boot acceleration technology that maintains an in-RAM cache used to service disk reads faster than a slower storage medium such as a disk drive”.
+VDI does not use “normal” computer disk devices, but usually segments of a shared storage medium.
+ReadyBoot and other optimizations designed to assist normal disk devices do not have equivalent effects on shared storage devices.  And further, for non-persistent VDI, 99.999% of computer state is discarded when the user logs off.
+This includes any optimizations performed by the OS during runtime.  Therefore, why allow Windows “normal” optimizations when all that computer and I/O work will be discarded at logoff for NP VDI?
+For persistent, the choice is yours.  Another consideration is again, pooled VDI.
+The users will normally not log into the same VM twice.
+Therefore, any RAM caching of predicted I/O will have unknown impact because the underlying disk extent being utilized for that logon session will be different from session to session.
+https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readyboot-analysis</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\ReadyBoot</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Turn off Cortana</Name>
+    <Description>Turn off Cortana.</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>AllowCortana</Name>
+      <Path>SOFTWARE\Policies\Microsoft\Windows\Windows Search</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>User-Initiated Feedback Trace</Name>
+    <Description>This log is a container for “user-initiated feedback” for wireless networking (Wi-Fi).  If the VMs were to emulate wireless networking, you might just leave this one alone.  Also, this trace is enabled by default, but not run until triggered, presumably from a user-initiated feedback for a wireless issue.  The Windows diagnostics would run, gather some information from the current system including an event trace, and then send that information to Microsoft.
+https://docs.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated-feedback-normal-mode</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiDriverIHVSession</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>WiFiSession Trace</Name>
+    <Description>Not documented, but not hard to understand.
+This is another diagnostic log for the Windows Diagnostics. If your VMs are not using Wi-Fi, this log is not needed.
+You could though leave this alone as it would almost never be started unless a user started a troubleshooter, and troubleshooters are usually disabled in VDI environments.</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiSession</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>Windows Update</Name>
+    <Description>Enables the detection, download, and installation of updates for Windows and other programs.
+NOTE: This read-only entry is analyzing if Windows Update has been disabled using Group Policy. This entry does NOT support disabling Windows Update.
+All of the relevant policies are under the path Computer configuration - Administrative Templates - Windows Components - Windows Update.
+For more information, please refer to official Microsoft documentation: https://docs.microsoft.com/en-us/windows/deployment/update/waas-wufb-group-policy</Description>
+    <Type>Registry</Type>
+    <Category>Miscellaneous</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>NoAutoUpdate</Name>
+      <Path>SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU</Path>
+      <Action>SetValue</Action>
+      <Value>1</Value>
+      <Type>Dword</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>WinPhoneCritical Trace</Name>
+    <Description>Not documented, but not hard to determine its use: diagnostics for phone.
+If not using or allowing phones to be attached to your VMs, no need to leave a trace enabled that will never be used.
+Or just leave this one alone.</Description>
+    <Type>Registry</Type>
+    <Category>Disable Windows Traces</Category>
+    <Order>80</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <Registry>
+      <Hive>HKLM</Hive>
+      <Name>Start</Name>
+      <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WinPhoneCritical</Path>
+      <Action>SetValue</Action>
+      <Value>0</Value>
+      <Type>DWord</Type>
+    </Registry>
+  </Item>
+  <Item>
+    <Name>AnalyzeSystem</Name>
+    <Description>This job analyzes the system looking for conditions that may cause high energy use.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>AnalyzeSystem</Name>
+      <Path>\Microsoft\Windows\Power Efficiency Diagnostics</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>BfeOnServiceStartTypeChange</Name>
+    <Description>Adjusts the start type for firewall-triggered services when the start type of the Base Filtering Engine (BFE) is disabled.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>BfeOnServiceStartTypeChange</Name>
+      <Path>\Microsoft\Windows\Windows Filtering Platform</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Cellular</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>Cellular</Name>
+      <Path>\Microsoft\Windows\Management\Provisioning\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Consolidator</Name>
+    <Description>Collects and sends usage data to Microsoft if opted-in to the Windows Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Consolidator</Name>
+      <Path>\Microsoft\Windows\Customer Experience Improvement Program</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>CreateObjectTask</Name>
+    <Description>Provides support for shell components that access system data.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>CreateObjectTask</Name>
+      <Path>\Microsoft\Windows\CloudExperienceHost</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Diagnostics</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>Diagnostics</Name>
+      <Path>\Microsoft\Windows\DiskFootprint\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Disable Server Manager at logon</Name>
+    <Description>Disable Server Manager at logon</Description>
+    <Type>ScheduledTask</Type>
+    <Category>Miscellaneous</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ServerManager</Name>
+      <Path>\Microsoft\Windows\Server Manager</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>FamilySafetyMonitor</Name>
+    <Description>Initializes Family Safety monitoring and enforcement.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>FamilySafetyMonitor</Name>
+      <Path>\Microsoft\Windows\Shell</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>FamilySafetyRefresh</Name>
+    <Description>Synchronizes the latest settings with the Microsoft family features service.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>FamilySafetyRefreshTask</Name>
+      <Path>\Microsoft\Windows\Shell</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>File History (maintenance mode)</Name>
+    <Description>Protects user files from accidental loss by copying them to a backup location when the system is unattended.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>File History (maintenance mode)</Name>
+      <Path>\Microsoft\Windows\FileHistory</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>IndexerAutomaticMaintenance</Name>
+    <Description>Keeps the search index up to date.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>IndexerAutomaticMaintenance</Name>
+      <Path>\Microsoft\Windows\Shell</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Location - Actions Dialog</Name>
+    <Description>Location - Actions Dialog</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>WindowsActionDialog</Name>
+      <Path>\Microsoft\Windows\Location</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Location - Notifications</Name>
+    <Description>Location - Notifications</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>Notifications</Name>
+      <Path>\Microsoft\Windows\Location</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MapsToastTask</Name>
+    <Description>Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>MapsToastTask</Name>
+      <Path>\Microsoft\Windows\Maps</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MapsUpdateTask</Name>
+    <Description>MapsUpdateTask</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>MapsUpdateTask</Name>
+      <Path>\Microsoft\Windows\Maps</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Microsoft Compatibility Appraiser</Name>
+    <Description>Aggregates and uploads Application Telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Microsoft Compatibility Appraiser</Name>
+      <Path>\Microsoft\Windows\Application Experience</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Microsoft-Windows-DiskDiagnosticDataCollector</Name>
+    <Description>Reports general disk and system information to Microsoft for users participating in the Customer Experience Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Microsoft-Windows-DiskDiagnosticDataCollector</Name>
+      <Path>\Microsoft\Windows\DiskDiagnostic</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Microsoft-Windows-DiskDiagnosticResolver</Name>
+    <Description>Warns users about faults reported by hard disks that support the Self Monitoring and Reporting Technology (S.M.A.R.T.) standard. This task is triggered automatically by the Diagnostic Policy Service when a S.M.A.R.T. fault is detected.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Microsoft-Windows-DiskDiagnosticResolver</Name>
+      <Path>\Microsoft\Windows\DiskDiagnostic</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MNO Metadata Parser</Name>
+    <Description>Mobile broadband account experience metadata parser.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>MNO Metadata Parser</Name>
+      <Path>\Microsoft\Windows\Mobile Broadband Accounts</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Mobile Broadband Accounts</Name>
+    <Description>Mobile broadband account experience metadata parser</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>MNO Metadata Parser</Name>
+      <Path>\Microsoft\Windows\Mobile Broadband Accounts</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MobilityManager</Name>
+    <Description>Provides support for the switching of mobility enabled VPN connections if their underlying interface goes down.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>MobilityManager</Name>
+      <Path>\Microsoft\Windows\Ras</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MS Edge - MicrosoftEdgeUpdateTaskMachineCore Task</Name>
+    <Description>Keeps your Microsoft software up to date. If this task is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Microsoft software using it.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>OptionalComponents</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <ScheduledTask>
+      <Name>MicrosoftEdgeUpdateTaskMachineCore</Name>
+      <Path>\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>MS Edge - MicrosoftEdgeUpdateTaskMachineUA Task</Name>
+    <Description>Keeps your Microsoft software up to date. If this task is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Microsoft software using it.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>OptionalComponents</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <ScheduledTask>
+      <Name>MicrosoftEdgeUpdateTaskMachineUA</Name>
+      <Path>\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Notifications</Name>
+    <Description>Location notification.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Notifications</Name>
+      <Path>\Microsoft\Windows\Location</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>NotificationTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>NotificationTask</Name>
+      <Path>\Microsoft\Windows\WwanSvc\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ProactiveScan</Name>
+    <Description>NTFS volume health scan.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ProactiveScan</Name>
+      <Path>\Microsoft\Windows\CHKDSK</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ProcessMemoryDiagnosticEvents</Name>
+    <Description>Schedules a memory diagnostic in response to system events.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ProcessMemoryDiagnosticEvents</Name>
+      <Path>\Microsoft\Windows\MemoryDiagnostic</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ProgramDataUpdater</Name>
+    <Description>Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ProgramDataUpdater</Name>
+      <Path>\Microsoft\Windows\Application Experience</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Proxy</Name>
+    <Description>Collects and uploads autochk SQM data if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Proxy</Name>
+      <Path>\Microsoft\Windows\Autochk</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>QueueReporting</Name>
+    <Description>Windows Error Reporting task to process queued reports.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>QueueReporting</Name>
+      <Path>\Microsoft\Windows\Windows Error Reporting</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>RecommendedTroubleshootingScanner</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>RecommendedTroubleshootingScanner</Name>
+      <Path>\Microsoft\Windows\Diagnosis\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ReconcileFeatures</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>ReconcileFeatures</Name>
+      <Path>\Microsoft\Windows\Flighting\FeatureConfig\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ReconcileLanguageResources</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>ReconcileLanguageResources</Name>
+      <Path>\Microsoft\Windows\LanguageComponentsInstaller\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>RefreshCache</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>RefreshCache</Name>
+      <Path>\Microsoft\Windows\Flighting\OneSettings\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>RegIdleBackup</Name>
+    <Description>Registry idle backup task.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>RegIdleBackup</Name>
+      <Path>\Microsoft\Windows\Registry</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ResolutionHost</Name>
+    <Description>The Windows Diagnostic Infrastructure Resolution host enables interactive resolutions for system problems detected by the Diagnostic Policy Service. It is triggered when necessary by the Diagnostic Policy Service in the appropriate user session. If the Diagnostic Policy Service is not running, the task will not run.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ResolutionHost</Name>
+      <Path>\Microsoft\Windows\WDI</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ResPriStaticDbSync</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>ResPriStaticDbSync</Name>
+      <Path>\Microsoft\Windows\Sysmain\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>RunFullMemoryDiagnostic</Name>
+    <Description>Detects and mitigates problems in physical memory (RAM).</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>RunFullMemoryDiagnostic</Name>
+      <Path>\Microsoft\Windows\MemoryDiagnostic</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ScanForUpdates</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>ScanForUpdates</Name>
+      <Path>\Microsoft\Windows\InstallService\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ScanForUpdatesAsUser</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>ScanForUpdatesAsUser</Name>
+      <Path>\Microsoft\Windows\InstallService\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Scheduled</Name>
+    <Description>Performs periodic maintenance of the computer system by fixing problems automatically or reporting them through the Action Center.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Scheduled</Name>
+      <Path>\Microsoft\Windows\Diagnosis</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ScheduledDefrag</Name>
+    <Description>This task defragments the computers hard disk drives.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>0</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>0</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ScheduledDefrag</Name>
+      <Path>\Microsoft\Windows\Defrag</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>ServerManager</Name>
+    <Description>Task for launching Initial Configuration Tasks or Server Manager at logon.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>ServerManager</Name>
+      <Path>\Microsoft\Windows\Server Manager</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SilentCleanup</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SilentCleanup</Name>
+      <Path>\Microsoft\Windows\DiskCleanup\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SmartRetry</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SmartRetry</Name>
+      <Path>\Microsoft\Windows\InstallService\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SpaceAgentTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SpaceAgentTask</Name>
+      <Path>\Microsoft\Windows\SpacePort\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SpaceManagerTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SpaceManagerTask</Name>
+      <Path>\Microsoft\Windows\SpacePort\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SpeechModelDownloadTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SpeechModelDownloadTask</Name>
+      <Path>\Microsoft\Windows\Speech\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Sqm-Tasks</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>Sqm-Tasks</Name>
+      <Path>\Microsoft\Windows\PI\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>SR</Name>
+    <Description>This task creates regular system protection points.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>SR</Name>
+      <Path>\Microsoft\Windows\SystemRestore</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>StartComponentCleanup</Name>
+    <Description>This job clean up components automatically when the system is not in use. This task is known to cause excessive CPU usage.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>StartComponentCleanup</Name>
+      <Path>\Microsoft\Windows\Servicing</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>StartupAppTask</Name>
+    <Description>Scans startup entries and raises notification to the user if there are too many startup entries.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>StartupAppTask</Name>
+      <Path>\Microsoft\Windows\Application Experience</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>StorageSense</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>StorageSense</Name>
+      <Path>\Microsoft\Windows\DiskFootprint\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>TPM-Maintenance</Name>
+    <Description>This task supports the Trusted Platform Module (TPM) by performing background actions on behalf of the OS.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>TPM-Maintenance</Name>
+      <Path>\Microsoft\Windows\TPM</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>UninstallDeviceTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>UninstallDeviceTask</Name>
+      <Path>\Microsoft\Windows\Bluetooth\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>UPnPHostConfig</Name>
+    <Description>Sets UPnPHost service to auto-start.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>UPnPHostConfig</Name>
+      <Path>\Microsoft\Windows\UPnP</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Usb-Notifications</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>Usb-Notifications</Name>
+      <Path>\Microsoft\Windows\USB\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>UsbCeip</Name>
+    <Description>Collects Universal Serial Bus related statistics and information about your machine and sends to the Windows Device Connectivity engineering group at Microsoft, if opted-in to Windows Customer Experience Improvement Program.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>UsbCeip</Name>
+      <Path>\Microsoft\Windows\Customer Experience Improvement Program</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>VerifyWinRE</Name>
+    <Description>Validates the Windows Recovery Environment.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>VerifyWinRE</Name>
+      <Path>\Microsoft\Windows\RecoveryEnvironment</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>WIM-Hash-Management</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>WIM-Hash-Management</Name>
+      <Path>\Microsoft\Windows\WOF\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Defender Cache Maintenance</Name>
+    <Description>Periodic maintenance task.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Windows Defender Cache Maintenance</Name>
+      <Path>\Microsoft\Windows\Windows Defender</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Defender Cleanup</Name>
+    <Description>Periodic cleanup task.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Windows Defender Cleanup</Name>
+      <Path>\Microsoft\Windows\Windows Defender</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Defender Scheduled Scan</Name>
+    <Description>Periodic scan task.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Windows Defender Scheduled Scan</Name>
+      <Path>\Microsoft\Windows\Windows Defender</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Defender Verification</Name>
+    <Description>Periodic verification task.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Windows Defender Verification</Name>
+      <Path>\Microsoft\Windows\Windows Defender</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Error Reporting</Name>
+    <Description>Windows Error Reporting task to process queued reports.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>QueueReporting</Name>
+      <Path>\Microsoft\Windows\Windows Error Reporting</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Windows Media Sharing</Name>
+    <Description>This task updates the cached list of folders and the security permissions on any new files in a user’s shared media library.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>UpdateLibrary</Name>
+      <Path>\Microsoft\Windows\Windows Media Sharing</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>WinSAT</Name>
+    <Description>Measures a system’s performance and capabilities.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>WinSAT</Name>
+      <Path>\Microsoft\Windows\Maintenance</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Workspace Join Recovery Check</Name>
+    <Description>Performs recovery check.</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <ScheduledTask>
+      <Name>Recovery-Check</Name>
+      <Path>\Microsoft\Windows\Workplace Join</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>WsSwapAssessmentTask</Name>
+    <Description>One of scheduled tasks that perform optimizations or data collections on computers that maintain their state across reboots. When a VDI VM task reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>WsSwapAssessmentTask</Name>
+      <Path>\Microsoft\Windows\Sysmain\</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>XblGameSaveTask</Name>
+    <Description>XblGameSave Standby Task</Description>
+    <Type>ScheduledTask</Type>
+    <Category>ScheduledTask</Category>
+    <Order>90</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <ScheduledTask>
+      <Name>XblGameSaveTask</Name>
+      <Path>\Microsoft\XblGameSave</Path>
+      <Action>Disabled</Action>
+    </ScheduledTask>
+  </Item>
+  <Item>
+    <Name>Disable Autoreset FTA</Name>
+    <Description>Sometimes certain Windows application can reclaim their file type association. This will generate message popups at logon. By disabling "autoreset" this behaviour will be disabled.</Description>
+    <Type>PowerShell</Type>
+    <Category>Miscellaneous</Category>
+    <Order>110</Order>
+    <OS>
+      <Windows11>
+        <Execute>0</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[$out = fsutil resource setautoreset false C:\ 2>&1 | Out-String]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Remove Azure Arc (Server 2022)</Name>
+    <Description>Remove Azure Arc</Description>
+    <Type>PowerShell</Type>
+    <Category>Remove Features</Category>
+    <Order>110</Order>
+    <OS>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[Disable-WindowsOptionalFeature -Online -FeatureName AzureArcSetup]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Remove Azure Arc (Server 2025)</Name>
+    <Description>Remove Azure Arc</Description>
+    <Type>PowerShell</Type>
+    <Category>Remove Features</Category>
+    <Order>110</Order>
+    <OS>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[Remove-WindowsCapability -online -Name AzureArcSetup~~~~]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Remove Windows Admin Centre Setup</Name>
+    <Description>Remove Windows Admin Centre Setup</Description>
+    <Type>PowerShell</Type>
+    <Category>Remove Features</Category>
+    <Order>110</Order>
+    <OS>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[Remove-WindowsFeature -Name WindowsAdminCenterSetup]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Set NewDiskPolicy to OnlineAll</Name>
+    <Description>Sets the SAN policy for new disks to OnlineAll.</Description>
+    <Type>PowerShell</Type>
+    <Category>MaintenanceTasks</Category>
+    <Order>110</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[Set-StorageSetting -NewDiskPolicy OnlineAll]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Set power plan to High Performance</Name>
+    <Description>Change current power plan to "High performance". If you rollback these changes, power plan will default to "Balanced".</Description>
+    <Type>PowerShell</Type>
+    <Category>Miscellaneous</Category>
+    <Order>110</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[[String]$m_DesiredPlanID = "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"; #This is High Performance
+[String]$m_CurrentPlan = powercfg /GetActiveScheme
+
+[String]$m_CurrentPlanID = $m_CurrentPlan.Substring($m_CurrentPlan.IndexOf(":") + 2).Split(" ")[0];
+
+# We want to compare current plan with "High Performance" - this is localized, so we are using scheme ID instead
+If ($m_CurrentPlanID -eq $m_DesiredPlanID) {
+    Return;
+}
+
+# Try to change power management plan
+PowerCfg /SetActive $m_DesiredPlanID;]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Superfetch</Name>
+    <Description>Maintains and improves system performance over time. If optimizing a persistent machine you may leave Superfetch enabled. If optimizing a non-persistent machine, disable it.</Description>
+    <Type>PowerShell</Type>
+    <Category>OptionalComponents</Category>
+    <Order>110</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>0</Execute>
+        <Physical>0</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[Disable-MMAgent -ApplicationLaunchPrefetching -ErrorAction SilentlyContinue
+Disable-MMAgent -ApplicationPreLaunch -ErrorAction SilentlyContinue]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Delete Temporary Installation Files</Name>
+    <Description>Cleanup some well known locations</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99930</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[$paths = @(
+    'C:\Drivers'
+    'C:\Windows\Temp\*'
+    'C:\Windows\SystemTemp\*'
+    'C:\Windows\Downloaded Installations\*'
+    'C:\Windows\*.log'
+    'C:\Windows\Logs\CBS\*'
+    'C:\Windows\Logs\DISM\*'
+    'C:\Windows\Panther\*'
+    'C:\Users\Public\Desktop\*'
+)
+
+foreach ($path in $paths) {
+    Write-Host "Deleting $path" -ForegroundColor Cyan -NoNewline
+    if (Test-Path $path) {
+        Remove-Item $path -Recurse -Force -ErrorAction SilentlyContinue
+        Write-Host " - Success" -ForegroundColor Green
+    } else {
+        Write-Host " - Not found, skipping" -ForegroundColor DarkGray
+    }
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Disk Cleanup</Name>
+    <Description>Cleanup the Disk Drive to free up some space</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99940</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[$regBase = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches'
+
+$categories = @(
+    'Active Setup Temp Folders'
+    'BranchCache'
+    'Downloaded Program Files'
+    'GameNewsFiles'
+    'GameStatisticsFiles'
+    'GameUpdateFiles'
+    'Internet Cache Files'
+    'Memory Dump Files'
+    'Offline Pages Files'
+    'Old ChkDsk Files'
+#    'Previous Installations'
+    'Recycle Bin'
+#    'Service Pack Cleanup'
+    'Setup Log Files'
+    'System error memory dump files'
+    'System error minidump files'
+    'Temporary Files'
+    'Temporary Setup Files'
+    'Temporary Sync Files'
+    'Thumbnail Cache'
+#    'Update Cleanup'
+    'Upgrade Discarded Files'
+    'User file versions'
+    'Windows Defender'
+    'Windows Error Reporting Archive Files'
+    'Windows Error Reporting Queue Files'
+    'Windows Error Reporting System Archive Files'
+    'Windows Error Reporting System Queue Files'
+#    'Windows ESD installation files'
+    'Windows Upgrade Log Files'
+)
+
+foreach ($category in $categories) {
+    $path = "$regBase\$category"
+    if (Test-Path $path) {
+        Set-ItemProperty -Path $path -Name 'StateFlags0100' -Value 2 -Type DWord
+    }
+}
+
+$cleanmgr = "$env:SystemRoot\System32\cleanmgr.exe"
+if (Test-Path $cleanmgr) {
+    Write-Host "Running Disk Cleanup for all categories..." -ForegroundColor Cyan
+    Start-Process $cleanmgr -ArgumentList '/sagerun:100' -Wait
+    Write-Host "Disk Cleanup completed." -ForegroundColor Green
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Clear All Event Logs</Name>
+    <Description>Clear all event logs</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99950</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[[Array]$EventLogs = & wevtutil enum-logs
+$EventLogs += "System"
+Write-Host 'Clear event logs' -ForegroundColor Yellow
+# Clear all event log entries
+foreach ($EventLog in $EventLogs) {
+    Write-Host "Clearing $EventLog" -NoNewline -ForegroundColor Cyan
+    & wevtutil cl "$EventLog" 2> $null
+    if ($?) {
+        Write-Host " - Success" -ForegroundColor Green
+    } else {
+        Write-Host " - Failed" -ForegroundColor Red
+    }
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Native Image Generation 32bit (NGEN)</Name>
+    <Description>THIS IS SLOW, it's normal for this operation to take a long time. This optimization pre-compiles .NET assemblies instead of using the just-in-time compilation using NGEN.exe.
+Does not support analyze/rollback modes, but it is generally safe to use.</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99960</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[. $Env:WinDir\Microsoft.Net\Framework\v4.0.30319\ngen.exe Update;]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Native Image Generation 64bit (NGEN)</Name>
+    <Description>THIS IS SLOW, it's normal for this operation to take a long time. This optimization pre-compiles .NET assemblies instead of using the just-in-time compilation using NGEN.exe.
+Does not support analyze/rollback modes, but it is generally safe to use.</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99960</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[if ($(Test-Path $Env:WinDir\Microsoft.Net\Framework64\v4.0.30319\ngen.exe) -eq $True) {
+    . $Env:WinDir\Microsoft.Net\Framework64\v4.0.30319\ngen.exe Update
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Remove Ghost NICs</Name>
+    <Description>Remove and clean (un-used) network adapters</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99970</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[$ghostNICs = Get-CimInstance Win32_NetworkAdapter | Where-Object {
+    $_.Installed -eq $true -and
+    $null -eq $_.MACAddress -and
+    $_.Description -iin @(
+        # Intel (emulated, used by many hypervisors)
+        'Intel(R) PRO/1000 MT Network Connection'
+        'Intel(R) PRO/1000 MT Desktop Adapter'
+        'Intel(R) PRO/1000 PF Server Adapter'
+        'Intel(R) 82574L Gigabit Network Connection'
+        'Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)'
+        # AMD/PCNet (VMware legacy, Xen)
+        'AMD PCNET Family PCI Ethernet Adapter'
+        'Lance/PCI Ethernet Adapter'
+        'Realtek RTL8139C+ Fast Ethernet NIC'
+        # VMware
+        'VMware VMXNET2 Ethernet Adapter'
+        'VMware Accelerated AMD PCNet Adapter'
+        'vmxnet3 Ethernet Adapter'
+        # Citrix XenServer / Xen
+        'Citrix PV Ethernet Adapter'
+        'Citrix PV Network Adapter'
+        'Xen Net Device Driver'
+        # Microsoft Hyper-V
+        'Microsoft Virtual Machine Bus Network Adapter'
+        'Microsoft Hyper-V Network Adapter'
+        # Nutanix AHV (VirtIO)
+        'Red Hat VirtIO Ethernet Adapter'
+        'VIRTIO Ethernet Adapter'
+    )
+}
+
+if (-not $ghostNICs) {
+    Write-Host 'No Ghost NICs found.' -ForegroundColor Yellow
+    exit 0
+}
+
+foreach ($nic in $ghostNICs) {
+    $nicProps = Get-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}\{0:D4}" -f [int]$nic.DeviceID) -ErrorAction SilentlyContinue
+    $netProps = Get-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Network\{4D36E972-E325-11CE-BFC1-08002BE10318}\$($nicProps.NetCfgInstanceId)\Connection") -ErrorAction SilentlyContinue
+
+    Write-Host ""
+    Write-Host -NoNewline -ForegroundColor White "ID     : "; Write-Host -ForegroundColor Yellow ("{0:D4}" -f [int]$nic.DeviceID)
+    Write-Host -NoNewline -ForegroundColor White "Network: "; Write-Host -ForegroundColor Yellow $netProps.Name
+    Write-Host -NoNewline -ForegroundColor White "NIC    : "; Write-Host -ForegroundColor Yellow $nic.Name
+    Write-Host -NoNewline -ForegroundColor White "Actions: Removing... "
+
+    $result = & pnputil /remove-device "@$($nicProps.DeviceInstanceID)" 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host 'Success!' -ForegroundColor Green
+    } else {
+        Write-Host "Error [$LASTEXITCODE]" -ForegroundColor Red
+    }
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Clear DHCP</Name>
+    <Description>It's recommended to clear DHCP settings from the registry as this can cause issues with Non Persistent (VDI) machines.</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99980</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[$regBase = 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\'
+
+$dhcpProperties = @(
+    'DhcpDefaultGateway'
+    'DhcpIPAddress'
+    'DhcpNameServer'
+    'DhcpServer'
+    'DhcpSubnetMask'
+    'DhcpSubnetMaskOpt'
+)
+
+if (Test-Path $regBase) {
+    Get-ChildItem $regBase -ErrorAction SilentlyContinue | ForEach-Object {
+        Write-Host "Processing: $($_.Name)" -ForegroundColor Cyan
+        $keyPath = $_.PSPath
+        $key = Get-ItemProperty -Path $keyPath
+        foreach ($property in $dhcpProperties) {
+            if ($null -ne $key.$property) {
+                Set-ItemProperty -Path $keyPath -Name $property -Value '' -ErrorAction SilentlyContinue
+                Write-Host "Cleared: $($_.PSChildName)\$property" -ForegroundColor Green
+            }
+        }
+    }
+}]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Clear Networking</Name>
+    <Description>It's recommended to clear certain networking settings from the registry as this can cause issues with Non Persistent (VDI) machines.</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99990</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[# Clear DNS cache
+Write-Host 'Flushing DNS cache...' -ForegroundColor Cyan
+Start-Process "$env:SystemRoot\System32\ipconfig.exe" -ArgumentList '/flushdns' -Wait -NoNewWindow
+Write-Host 'DNS cache flushed.' -ForegroundColor Green
+
+# Release DHCP lease
+Write-Host 'Releasing DHCP lease...' -ForegroundColor Cyan
+Start-Process "$env:SystemRoot\System32\ipconfig.exe" -ArgumentList '/release' -Wait -NoNewWindow
+Write-Host 'DHCP lease released.' -ForegroundColor Green
+
+# Clear ARP cache
+Write-Host 'Clearing ARP cache...' -ForegroundColor Cyan
+Start-Process "$env:SystemRoot\System32\arp.exe" -ArgumentList '-d' -Wait -NoNewWindow
+Write-Host 'ARP cache cleared.' -ForegroundColor Green
+
+# Clear NetBIOS name cache
+Write-Host 'Clearing NetBIOS name cache...' -ForegroundColor Cyan
+Start-Process "$env:SystemRoot\System32\nbtstat.exe" -ArgumentList '-R' -Wait -NoNewWindow
+Write-Host 'NetBIOS name cache cleared.' -ForegroundColor Green]]></Script>
+    </PowerShell>
+  </Item>
+  <Item>
+    <Name>Shutdown</Name>
+    <Description>Shutdown the machine after optimization</Description>
+    <Type>PowerShell</Type>
+    <Category>Finalize</Category>
+    <Order>99999</Order>
+    <OS>
+      <Windows11>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows11>
+      <Windows10>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Windows10>
+      <Server2025>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2025>
+      <Server2022>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2022>
+      <Server2019>
+        <Execute>1</Execute>
+        <Physical>1</Physical>
+        <Virtual>1</Virtual>
+      </Server2019>
+    </OS>
+    <PowerShell>
+      <Engine>powershell</Engine>
+      <Script><![CDATA[& C:\Windows\system32\shutdown.exe /s /t 60 /c "Machine was shutdown after optimization" /d p:2:4]]></Script>
+    </PowerShell>
+  </Item>
+</Items>

@@ -1,0 +1,6 @@
+TemplateEditor/node_modules/
+TemplateEditor/dist/
+TemplateEditor/.env
+TemplateEditor/*.local
+.claude/
+.superpowers/
