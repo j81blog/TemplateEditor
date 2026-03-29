@@ -25,10 +25,17 @@
             </div>
             <div class="card-body">
               <div class="form-row">
-                <div class="fg">
+                <div style="flex:3">
                   <div class="field">
                     <label class="field-lbl">Name *</label>
                     <input class="field-inp" :value="item.name" @input="update('name', ($event.target as HTMLInputElement).value)" />
+                  </div>
+                </div>
+                <div style="flex:1">
+                  <div class="field">
+                    <label class="field-lbl">Order</label>
+                    <input class="field-inp" type="number" min="0" max="99999" :value="item.order"
+                      @input="update('order', parseInt(($event.target as HTMLInputElement).value) || 100)" />
                   </div>
                 </div>
               </div>
@@ -56,13 +63,6 @@
                     <datalist id="cat-list">
                       <option v-for="c in categories" :key="c" :value="c" />
                     </datalist>
-                  </div>
-                </div>
-                <div style="flex:0 0 100px">
-                  <div class="field">
-                    <label class="field-lbl">Order</label>
-                    <input class="field-inp" type="number" min="0" max="99999" :value="item.order"
-                      @input="update('order', parseInt(($event.target as HTMLInputElement).value) || 100)" />
                   </div>
                 </div>
               </div>

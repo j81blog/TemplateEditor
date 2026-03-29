@@ -12,7 +12,7 @@
             <input class="field-inp" :value="p.name" @input="emit('update', { name: ($event.target as HTMLInputElement).value })" />
           </div>
         </div>
-        <div style="flex:0 0 140px">
+        <div class="fg">
           <div class="field">
             <label class="field-lbl">Action *</label>
             <select class="field-inp" :value="p.action" @change="emit('update', { action: ($event.target as HTMLSelectElement).value })">

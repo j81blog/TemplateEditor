@@ -51,7 +51,12 @@
         <div class="fg">
           <div class="field">
             <label class="field-lbl">Value *</label>
-            <input class="field-inp" :value="p.value" @input="emit('update', { value: ($event.target as HTMLInputElement).value })" :placeholder="valuePlaceholder" />
+            <textarea v-if="isMultiline" class="field-inp field-ta" :value="p.value"
+              @input="emit('update', { value: ($event.target as HTMLTextAreaElement).value })"
+              :placeholder="valuePlaceholder" rows="3" />
+            <input v-else class="field-inp" :value="p.value"
+              @input="emit('update', { value: ($event.target as HTMLInputElement).value })"
+              :placeholder="valuePlaceholder" />
           </div>
         </div>
       </div>
@@ -67,10 +72,16 @@ const props = defineProps<{ item: TemplateItem }>()
 const emit = defineEmits<{ update: [patch: Partial<RegistryPayload>] }>()
 const p = computed(() => props.item.payload as RegistryPayload)
 const needsName = computed(() => ['SetValue','DeleteValue'].includes(p.value.action))
+const isMultiline = computed(() => ['multistring', 'binary'].includes(p.value.registryType?.toLowerCase()))
 const valuePlaceholder = computed(() => {
   const t = p.value.registryType?.toLowerCase()
   if (t === 'dword') return '0 or 0x00000001'
-  if (t === 'binary') return 'FF 00 AB'
+  if (t === 'binary') return 'FF 00 AB CD'
+  if (t === 'multistring') return 'value1\nvalue2\nvalue3'
   return ''
 })
 </script>
+
+<style scoped>
+.field-ta { resize: vertical; min-height: 60px; font-size: 12px; font-family: 'Montserrat', sans-serif; }
+</style>

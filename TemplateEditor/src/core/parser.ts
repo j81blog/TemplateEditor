@@ -94,6 +94,14 @@ function parsePayload(el: Element, type: ItemType): ItemPayload {
   }
 }
 
+function normalizeRegistryType(raw: string): string {
+  const map: Record<string, string> = {
+    dword: 'DWord', string: 'String', expandstring: 'ExpandString',
+    multistring: 'MultiString', qword: 'Qword', binary: 'Binary'
+  }
+  return map[raw.toLowerCase()] ?? raw
+}
+
 function parseRegistry(el: Element): RegistryPayload {
   const r = el.querySelector('Registry')
   if (!r) return { type: 'Registry', hive: 'HKLM', path: '', name: '', action: 'SetValue', value: '', registryType: 'DWord' }
@@ -108,7 +116,7 @@ function parseRegistry(el: Element): RegistryPayload {
     name,
     action,
     value: text(r, 'Value'),
-    registryType: text(r, 'Type')
+    registryType: normalizeRegistryType(text(r, 'Type'))
   }
 }
 
