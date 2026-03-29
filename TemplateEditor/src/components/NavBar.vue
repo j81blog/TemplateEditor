@@ -6,8 +6,9 @@
     </div>
     <div class="nav-actions">
       <button class="nav-btn" @click="emit('new')">New from Default</button>
-      <button class="nav-btn" @click="emit('open')">Open…</button>
+      <button class="nav-btn" @click="emit('open')">Open Template</button>
       <button class="nav-btn download" :disabled="documentStore.hasErrors" @click="emit('save')">Download XML</button>
+      <button class="nav-btn download" @click="downloadScript">Download Script</button>
       <div class="nav-div"></div>
       <button class="nav-btn" @click="emit('manageos')">Manage OS</button>
       <button class="nav-btn" @click="emit('pdf')">PDF Report</button>
@@ -50,6 +51,13 @@ onMounted(() => {
 })
 
 onUnmounted(() => { mediaQuery.removeEventListener('change', onSystemChange) })
+
+function downloadScript() {
+  const a = document.createElement('a')
+  a.href = import.meta.env.BASE_URL + 'Invoke-WindowsOptimization.ps1'
+  a.download = 'Invoke-WindowsOptimization.ps1'
+  a.click()
+}
 
 function toggleTheme() {
   isDark.value = !isDark.value

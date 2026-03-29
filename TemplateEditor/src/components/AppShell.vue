@@ -29,11 +29,16 @@ defineExpose({
 function startDrag(e: MouseEvent) {
   const startX = e.clientX
   const startW = width.value
+  document.body.style.userSelect = 'none'
   const onMove = (ev: MouseEvent) => {
     width.value = Math.max(220, Math.min(600, startW + ev.clientX - startX))
     setSidebarVar(width.value)
   }
-  const onUp = () => { window.removeEventListener('mousemove', onMove); window.removeEventListener('mouseup', onUp) }
+  const onUp = () => {
+    document.body.style.userSelect = ''
+    window.removeEventListener('mousemove', onMove)
+    window.removeEventListener('mouseup', onUp)
+  }
   window.addEventListener('mousemove', onMove)
   window.addEventListener('mouseup', onUp)
 }

@@ -1,6 +1,7 @@
 <template>
   <div v-if="!item" class="editor-empty">
-    <p>Select an item from the sidebar or create a new one.</p>
+    <p>Click the <strong>"New from Default"</strong> button to start with a default template.</p>
+    <p>Click the <strong>"Open Template"</strong> button to open and change your own template.</p>
   </div>
 
   <div v-else class="editor-layout">
@@ -59,10 +60,13 @@
                 <div class="fg">
                   <div class="field">
                     <label class="field-lbl">Category *</label>
-                    <input class="field-inp" list="cat-list" :value="item.category" @input="update('category', ($event.target as HTMLInputElement).value)" />
-                    <datalist id="cat-list">
-                      <option v-for="c in categories" :key="c" :value="c" />
-                    </datalist>
+                    <div class="cat-row">
+                      <select class="field-inp" :value="item.category" @change="update('category', ($event.target as HTMLSelectElement).value)">
+                        <option v-if="!item.category" value="" disabled>— select category —</option>
+                        <option v-for="c in categories" :key="c" :value="c">{{ c }}</option>
+                      </select>
+                      <button class="cat-add-btn" title="Add new category" @click="openCatDialog">+</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -84,11 +88,24 @@
         </div>
       </div>
     </div>
+    <!-- Add Category dialog -->
+    <div v-if="showCatDialog" class="dlg-overlay" @click.self="showCatDialog = false">
+      <div class="dlg">
+        <div class="dlg-title">Add Category</div>
+        <input ref="catInput" class="dlg-inp" v-model="newCatName" placeholder="Category name"
+          @keydown.enter="confirmAddCat" @keydown.escape="showCatDialog = false" />
+        <div v-if="catError" class="dlg-error">{{ catError }}</div>
+        <div class="dlg-actions">
+          <button class="dlg-btn secondary" @click="showCatDialog = false">Cancel</button>
+          <button class="dlg-btn primary" @click="confirmAddCat">Add</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, defineAsyncComponent } from 'vue'
+import { computed, defineAsyncComponent, ref, nextTick } from 'vue'
 import { documentStore } from '../../store/document'
 import { uiStore } from '../../store/ui'
 import type { TemplateItem, ItemType, ItemPayload } from '../../core/types'
@@ -136,6 +153,27 @@ function onTypeChange(newType: ItemType) {
   documentStore.updateItem(item.value.id, { type: newType, typeRaw: newType, payload: defaultPayloads[newType] })
 }
 
+const showCatDialog = ref(false)
+const newCatName = ref('')
+const catError = ref('')
+const catInput = ref<HTMLInputElement | null>(null)
+
+function openCatDialog() {
+  newCatName.value = ''
+  catError.value = ''
+  showCatDialog.value = true
+  nextTick(() => catInput.value?.focus())
+}
+
+function confirmAddCat() {
+  const name = newCatName.value.trim()
+  if (!name) { catError.value = 'Name is required.'; return }
+  if (categories.value.includes(name)) { catError.value = 'Category already exists.'; return }
+  if (!item.value) return
+  documentStore.updateItem(item.value.id, { category: name })
+  showCatDialog.value = false
+}
+
 function onPayloadUpdate(patch: Partial<ItemPayload>) {
   if (!item.value) return
   documentStore.updateItem(item.value.id, { payload: { ...item.value.payload, ...patch } as ItemPayload })
@@ -143,7 +181,8 @@ function onPayloadUpdate(patch: Partial<ItemPayload>) {
 </script>
 
 <style scoped>
-.editor-empty { display: flex; align-items: center; justify-content: center; flex: 1; color: var(--field-label); font-size: 13px; }
+.editor-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; color: var(--bc-name); font-size: 13px; gap: 8px; }
+.editor-empty p { margin: 0; text-align: center; }
 .editor-layout { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
 .bc-bar { display: flex; align-items: center; gap: 8px; padding: 9px 16px; background: var(--bc-bg); border-bottom: 1px solid var(--bc-border); flex-shrink: 0; }
 .bc-cat { font-size: 11px; color: var(--bc-cat); font-weight: 500; }
@@ -159,4 +198,21 @@ function onPayloadUpdate(patch: Partial<ItemPayload>) {
 .issue-row.error { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.2); color: #f87171; }
 .issue-row.warning { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.2); color: #fbbf24; }
 .issue-icon { font-size: 10px; flex-shrink: 0; margin-top: 1px; }
+
+.cat-row { display: flex; align-items: center; gap: 4px; }
+.cat-row .field-inp { flex: 1; min-width: 0; }
+.cat-add-btn { flex-shrink: 0; width: 22px; height: 22px; padding: 0; border: 1px solid var(--field-border); border-radius: 4px; background: var(--field-bg); color: var(--field-txt); font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.cat-add-btn:hover { background: var(--bc-badge-bg); }
+
+.dlg-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.dlg { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px; min-width: 280px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+.dlg-title { font-size: 13px; font-weight: 700; color: var(--bc-name); }
+.dlg-inp { background: var(--field-bg); border: 1px solid var(--field-border); border-radius: 5px; padding: 7px 10px; font-size: 12px; font-family: inherit; color: var(--field-txt); outline: none; width: 100%; }
+.dlg-inp:focus { border-color: var(--accent, #3b82f6); }
+.dlg-error { font-size: 11px; color: #f87171; }
+.dlg-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.dlg-btn { padding: 6px 14px; border-radius: 5px; font-size: 12px; font-family: inherit; cursor: pointer; border: 1px solid transparent; }
+.dlg-btn.secondary { background: transparent; border-color: var(--field-border); color: var(--field-txt); }
+.dlg-btn.primary { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+.dlg-btn.primary:hover { background: #2563eb; }
 </style>

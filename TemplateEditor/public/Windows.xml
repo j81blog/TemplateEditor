@@ -52,7 +52,7 @@
     <Name>Remove Administrative Tools from Default Profile</Name>
     <Description>Removes the Administrative Tools shortcut from the Default user profile to prevent it from being copied to new user profiles.</Description>
     <Type>FileFolder</Type>
-    <Category>CleanupDefaultProfile</Category>
+    <Category>Cleanup Default Profile</Category>
     <Order>50</Order>
     <OS>
       <Windows11>
@@ -92,7 +92,7 @@
     <Name>Remove Maintenance from Default Profile</Name>
     <Description>Removes the Maintenance folder from the Default user profile to prevent it from being copied to new user profiles.</Description>
     <Type>FileFolder</Type>
-    <Category>CleanupDefaultProfile</Category>
+    <Category>Cleanup Default Profile</Category>
     <Order>50</Order>
     <OS>
       <Windows11>
@@ -132,7 +132,7 @@
     <Name>Remove System Tools from Default Profile</Name>
     <Description>Removes the System Tools folder from the Default user profile to prevent it from being copied to new user profiles.</Description>
     <Type>FileFolder</Type>
-    <Category>CleanupDefaultProfile</Category>
+    <Category>Cleanup Default Profile</Category>
     <Order>50</Order>
     <OS>
       <Windows11>
@@ -172,7 +172,7 @@
     <Name>Clipchamp - Video Editor</Name>
     <Description>Clipchamp - Video Editor</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -206,7 +206,7 @@
     <Name>Microsoft News</Name>
     <Description>Microsoft News</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -223,7 +223,7 @@
     <Name>Microsoft Todo</Name>
     <Description>Microsoft Todo</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -240,7 +240,7 @@
     <Name>Microsoft.BingWeather</Name>
     <Description>Microsoft.BingWeather</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -257,7 +257,7 @@
     <Name>Microsoft.GamingApp</Name>
     <Description>Microsoft.GamingApp</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -274,7 +274,7 @@
     <Name>Microsoft.GetHelp</Name>
     <Description>Microsoft.GetHelp</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -291,7 +291,7 @@
     <Name>Microsoft.Getstarted</Name>
     <Description>Microsoft.Getstarted</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -308,7 +308,7 @@
     <Name>Microsoft.HEIFImageExtension</Name>
     <Description>Adds support for High Efficiency Image File (HEIF) format, usually with .heif extension.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -325,7 +325,7 @@
     <Name>Microsoft.Microsoft3DViewer</Name>
     <Description>Microsoft.Microsoft3DViewer</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -342,7 +342,7 @@
     <Name>Microsoft.MicrosoftOfficeHub</Name>
     <Description>Microsoft.MicrosoftOfficeHub</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -359,7 +359,7 @@
     <Name>Microsoft.MicrosoftSolitaireCollection</Name>
     <Description>Microsoft.MicrosoftSolitaireCollection</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -376,7 +376,7 @@
     <Name>Microsoft.MicrosoftStickyNotes</Name>
     <Description>Microsoft.MicrosoftStickyNotes</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -393,7 +393,7 @@
     <Name>Microsoft.MixedReality.Portal</Name>
     <Description>Provides access to mixed reality games and VR experiences.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -410,7 +410,7 @@
     <Name>Microsoft.MSPaint</Name>
     <Description>Microsoft.MSPaint</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -427,7 +427,7 @@
     <Name>Microsoft.Office.OneNote</Name>
     <Description>Microsoft.Office.OneNote</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -444,7 +444,7 @@
     <Name>Microsoft.People</Name>
     <Description>Microsoft.People</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -461,7 +461,7 @@
     <Name>Microsoft.ScreenSketch</Name>
     <Description>Removes "Snip &amp; Sketch" application. Provides functionality of Snipping Tool with additional improvements.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -478,7 +478,7 @@
     <Name>Microsoft.SkypeApp</Name>
     <Description>Microsoft.SkypeApp</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -495,7 +495,7 @@
     <Name>Microsoft.StorePurchaseApp</Name>
     <Description>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -514,7 +514,7 @@
 
 Note: This is required to support HDR video streaming</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -531,7 +531,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.Wallet</Name>
     <Description>Microsoft.Wallet</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -548,7 +548,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WebMediaExtensions</Name>
     <Description>Microsoft.WebMediaExtensions</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -565,7 +565,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WebpImageExtension</Name>
     <Description>Adds support for image format WebP.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -582,7 +582,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.Windows.Photos</Name>
     <Description>Microsoft.Windows.Photos</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -599,7 +599,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsAlarms</Name>
     <Description>Microsoft.WindowsAlarms</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -616,7 +616,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsCalculator</Name>
     <Description>Built-in Windows Calculator. If your users are using it (mostly desktop sessions rather than published applications), do not remove it unless you have a replacement calculator app.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -633,7 +633,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsCamera</Name>
     <Description>Microsoft.WindowsCamera</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -650,7 +650,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsCommunicationsApps</Name>
     <Description>Disable Windows Mail and Calendar functionality</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -667,7 +667,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsFeedbackHub</Name>
     <Description>Microsoft.WindowsFeedbackHub</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -694,7 +694,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsMaps</Name>
     <Description>Microsoft.WindowsMaps</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -711,7 +711,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsSoundRecorder</Name>
     <Description>Microsoft.WindowsSoundRecorder</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -728,7 +728,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.WindowsStore</Name>
     <Description>Microsoft Store application. Do not remove it if you're planning to use UWP applications. After removed, it is not possible to fix it without reverting to previous backup / snapshot or resetting operating system.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -745,7 +745,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.Xbox.TCUI</Name>
     <Description>Microsoft.Xbox.TCUI</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -762,7 +762,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.XboxApp</Name>
     <Description>Microsoft.XboxApp</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -779,7 +779,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.XboxGameOverlay</Name>
     <Description>Microsoft.XboxGameOverlay</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -796,7 +796,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.XboxGamingOverlay</Name>
     <Description>Microsoft.XboxGamingOverlay</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -813,7 +813,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.XboxIdentityProvider</Name>
     <Description>Microsoft.XboxIdentityProvider</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -830,7 +830,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.XboxSpeechToTextOverlay</Name>
     <Description>Microsoft.XboxSpeechToTextOverlay</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -847,7 +847,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.YourPhone</Name>
     <Description>Provides access to remotely send text messages or access images on Android-based phone.</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -864,7 +864,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.ZuneMusic</Name>
     <Description>Microsoft.ZuneMusic</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -881,7 +881,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Microsoft.ZuneVideo</Name>
     <Description>Microsoft.ZuneVideo</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -898,7 +898,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Outlook (new)</Name>
     <Description>The new Outlook app</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -915,7 +915,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Quick Assist</Name>
     <Description>Quick Assist</Description>
     <Type>StoreApp</Type>
-    <Category>RemoveApplications</Category>
+    <Category>Remove Applications</Category>
     <Order>60</Order>
     <OS>
       <Windows11>
@@ -932,7 +932,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>AllJoyn Router Service</Name>
     <Description>Routes AllJoyn messages for the local AllJoyn clients.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -965,7 +965,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Application Layer Gateway Service</Name>
     <Description>Provides support for 3rd party protocol plug-ins for Internet Connection Sharing.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -998,7 +998,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>AVCTP service</Name>
     <Description>This is Audio Video Control Transport Protocol service</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1016,7 +1016,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>BitLocker Drive Encryption Service</Name>
     <Description>BDESVC hosts the BitLocker Drive Encryption service. BitLocker Drive Encryption provides secure startup for the operating system, as well as full volume encryption for OS, fixed or removable volumes. This service allows BitLocker to prompt users for various actions related to their volumes when mounted, and unlocks volumes automatically without user interaction. Additionally, it stores recovery information to Active Directory, if available, and, if necessary, ensures the most recent recovery certificates are used.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1034,7 +1034,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Block Level Backup Engine Service</Name>
     <Description>The WBENGINE service is used by Windows Backup to perform backup and recovery operations.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1052,7 +1052,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Bluetooth Audio Gateway Service</Name>
     <Description>Service supporting the audio gateway role of the Bluetooth Handsfree Profile.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1085,7 +1085,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Bluetooth Support Service</Name>
     <Description>The Bluetooth service supports discovery and association of remote Bluetooth devices.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1118,7 +1118,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>BranchCache</Name>
     <Description>This service caches network content from peers on the local subnet.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1136,7 +1136,7 @@ Note: This is required to support HDR video streaming</Description>
     <Name>Cellular Time service</Name>
     <Description>This service sets time based on NITZ messages from a Mobile Network.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1156,7 +1156,7 @@ Note: This is required to support HDR video streaming</Description>
 
 NOTE: Stopping this service prevents Microsoft Defender ATP from working properly.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1189,7 +1189,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Contact Data</Name>
     <Description>Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1207,7 +1207,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Data Usage</Name>
     <Description>Network data usage, data limit, restrict background data, metered networks.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1225,7 +1225,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Diagnostic Execution Service</Name>
     <Description>Diagnostic Execution Service</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1243,7 +1243,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Diagnostic Policy Service</Name>
     <Description>The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1276,7 +1276,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Diagnostic Service Host</Name>
     <Description>The Diagnostic Service Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local Service context.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1309,7 +1309,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Diagnostic System Host</Name>
     <Description>The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1342,7 +1342,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Distributed Link Tracking Client</Name>
     <Description>Maintains links between NTFS files within a computer or across computers in a network domain.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1360,7 +1360,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Downloaded Maps Manager</Name>
     <Description>Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1393,7 +1393,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Encrypting File System (EFS)</Name>
     <Description>Provides the core file encryption technology used to store encrypted files on NTFS file system volumes.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1426,7 +1426,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Fax</Name>
     <Description>Enables you to send and receive faxes, utilizing fax resources available on this computer or on the network.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1444,7 +1444,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Function Discovery Provider Host</Name>
     <Description>The FDPHOST service hosts the Function Discovery (FD) network discovery providers. These FD providers supply network discovery services for the Simple Services Discovery Protocol (SSDP) and Web Services – Discovery (WS-D) protocol. Stopping or disabling the FDPHOST service will disable network discovery for these protocols when using FD. When this service is unavailable, network services using FD and relying on these discovery protocols will be unable to find network devices or resources.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1477,7 +1477,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>Function Discovery Resource Publication</Name>
     <Description>Publishes this computer and resources attached to this computer so they can be discovered over the network.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1510,7 +1510,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Name>GameDVR and Broadcast user service</Name>
     <Description>This user service is used for Game Recordings and Live Broadcasts</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1529,7 +1529,7 @@ NOTE: Stopping this service prevents Microsoft Defender ATP from working properl
     <Description>This service monitors the current location of the system and manages geofences (a geographical location with associated events).
 If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1547,7 +1547,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>Internet Connection Sharing (ICS)</Name>
     <Description>Provides network address translation, addressing, name resolution and/or intrusion prevention services for a home or small office network.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1580,7 +1580,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>MessagingService</Name>
     <Description>Service supporting text messaging and related functionality.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1598,7 +1598,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>Microsoft Windows SMS Router Service</Name>
     <Description>Routes messages based on rules to appropriate clients.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1616,7 +1616,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>MS Edge - Microsoft Edge Elevation Service (MicrosoftEdgeElevationService)</Name>
     <Description>Keeps Microsoft Edge up to update. If this service is disabled, the application will not be kept up to date.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1654,7 +1654,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>MS Edge - Microsoft Edge Update Service (edgeupdate)</Name>
     <Description>Keeps your Microsoft software up to date. If this service is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This service uninstalls itself when there is no Microsoft software using it.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1692,7 +1692,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>MS Edge - Microsoft Edge Update Service (edgeupdatem)</Name>
     <Description>Keeps your Microsoft software up to date. If this service is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This service uninstalls itself when there is no Microsoft software using it.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1730,7 +1730,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>Offline Files</Name>
     <Description>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1763,7 +1763,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>Offline Files Driver</Name>
     <Description>The Offline Files service performs maintenance activities on the Offline Files cache, responds to user logon and logoff events, implements the internals of the public API, and dispatches interesting events to those interested in Offline Files activities and changes in cache state.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1796,7 +1796,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>OneCore capture service</Name>
     <Description>Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1814,7 +1814,7 @@ If you turn off this service, applications will be unable to use or receive noti
     <Name>OneSync Service</Name>
     <Description>This (per-user) service synchronizes mail, contacts, calendar and various other user data.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1834,7 +1834,7 @@ If you turn off this service, applications will be unable to use or receive noti
 
 NOTE:Disabling this service prevents defragmentation (UI) from working.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1867,7 +1867,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Parental Controls</Name>
     <Description>Enforces parental controls for child accounts in Windows. If this service is stopped or disabled, parental controls may not be enforced.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1885,7 +1885,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Payments and NFC/SE Manager</Name>
     <Description>Manages payments and Near Field Communication (NFC) based secure elements.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1918,7 +1918,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Retail Demo Service</Name>
     <Description>The Retail Demo service controls device activity while the device is in retail demo mode.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1936,7 +1936,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Secure Socket Tunneling Protocol Service</Name>
     <Description>Provides support for the Secure Socket Tunneling Protocol (SSTP) to connect to remote computers using VPN.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Server2019>
@@ -1964,7 +1964,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Sensor Monitoring Service</Name>
     <Description>Monitors various sensors in order to expose data and adapt to system and user state.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -1997,7 +1997,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
     <Name>Shared PC Account Manager</Name>
     <Description>Manages profiles and accounts on a SharedPC configured device</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Server2019>
@@ -2027,7 +2027,7 @@ NOTE:Disabling this service prevents defragmentation (UI) from working.</Descrip
 
 NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD writers) and can also cause event log entries by AppX packages.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2060,7 +2060,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>SSDP Discovery</Name>
     <Description>Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2093,7 +2093,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Superfetch</Name>
     <Description>Maintains and improves system performance over time. If optimizing a persistent machine you may leave Superfetch enabled. If optimizing a non-persistent machine, disable it.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Server2019>
@@ -2111,7 +2111,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Themes</Name>
     <Description>Provides user experience theme management. Disabling Themes will impact the user experience, but can help with server density.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Server2019>
@@ -2157,7 +2157,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>UPnP Device Host</Name>
     <Description>Allows UPnP devices to be hosted on this computer.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2190,7 +2190,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Volumetric Audio Compositor Service</Name>
     <Description>Hosts spatial analysis for Mixed Reality audio simulation.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2208,7 +2208,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Windows Connect Now - Config Registrar</Name>
     <Description>WCNCSVC hosts the Windows Connect Now Configuration which is Microsoft's Implementation of Wi-Fi Protected Setup (WPS) protocol. This is used to configure Wireless LAN settings for an Access Point (AP) or a Wi-Fi Device. The service is started programmatically as needed.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2226,7 +2226,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Windows Error Reporting Service</Name>
     <Description>Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. Disable it if logs are not being gathered and analyzed.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2264,7 +2264,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Name>Windows Media Player Network Sharing Service</Name>
     <Description>Shares Windows Media Player libraries to other networked players and media devices using Universal Plug and Play.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2298,7 +2298,7 @@ NOTE: Disabling this service impacts some UI elements (e.g. Format menu for DVD 
     <Description>Provides the ability to share a cellular data connection with another device.
 Recommended by Microsoft to disable: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2332,7 +2332,7 @@ Recommended by Microsoft to disable: https://docs.microsoft.com/en-us/windows-se
     <Description>Provides content indexing, property caching, and search results for files, e-mail, and other content. Consider disabling it as it has a high impact on server density.
 NOTE: Do not disable if you want to enable search for example in Outlook.</Description>
     <Type>Service</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2365,7 +2365,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>WLAN AutoConfig</Name>
     <Description>The WLANSVC service provides the logic required to configure, discover, connect to, and disconnect from a wireless local area network (WLAN) as defined by IEEE 802.11 standards. It also contains the logic to turn your computer into a software access point so that other devices or computers can connect to your computer wirelessly using a WLAN adapter that can support this.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2383,7 +2383,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>WWAN AutoConfig</Name>
     <Description>This service manages mobile broadband (GSM and CDMA) data card/embedded module adapters and connections by auto-configuring the networks. It is strongly recommended that this service be kept running for best user experience of mobile broadband devices.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2401,7 +2401,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>Xbox Accessory Management Service</Name>
     <Description>This service manages connected Xbox Accessories.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2419,7 +2419,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>Xbox Live Auth Manager</Name>
     <Description>Provides authentication and authorization services for interacting with Xbox Live.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2437,7 +2437,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>Xbox Live Game Save</Name>
     <Description>This service syncs save data for Xbox Live save enabled games.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -2455,7 +2455,7 @@ NOTE: Do not disable if you want to enable search for example in Outlook.</Descr
     <Name>Xbox Live Networking Service</Name>
     <Description>This service supports the Windows.Networking.XboxLive application programming interface.</Description>
     <Type>Service</Type>
-    <Category>DisableServices</Category>
+    <Category>Disable Services</Category>
     <Order>70</Order>
     <OS>
       <Windows11>
@@ -3000,7 +3000,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
     <Name>MS Edge - ActiveSetup</Name>
     <Description>Remove the ActiveSetup value</Description>
     <Type>Registry</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>80</Order>
     <OS>
       <Windows11>
@@ -3042,7 +3042,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
     <Name>MS Edge - ActiveSetup (WOW6432)</Name>
     <Description>Remove the ActiveSetup value</Description>
     <Type>Registry</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>80</Order>
     <OS>
       <Windows11>
@@ -3087,7 +3087,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
 (1) Always allow installs
 (4) Always allow Machine-Wide</Description>
     <Type>Registry</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>80</Order>
     <OS>
       <Windows11>
@@ -3133,7 +3133,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
 (2) Manual updates only
 (3) Automatic silent updates only</Description>
     <Type>Registry</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>80</Order>
     <OS>
       <Windows11>
@@ -3337,7 +3337,7 @@ Or just leave this one alone.</Description>
     <Name>AnalyzeSystem</Name>
     <Description>This job analyzes the system looking for conditions that may cause high energy use.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3371,7 +3371,7 @@ Or just leave this one alone.</Description>
     <Name>BfeOnServiceStartTypeChange</Name>
     <Description>Adjusts the start type for firewall-triggered services when the start type of the Base Filtering Engine (BFE) is disabled.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3407,7 +3407,7 @@ Or just leave this one alone.</Description>
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3426,7 +3426,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Consolidator</Name>
     <Description>Collects and sends usage data to Microsoft if opted-in to the Windows Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3460,7 +3460,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>CreateObjectTask</Name>
     <Description>Provides support for shell components that access system data.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -3491,7 +3491,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3539,7 +3539,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>FamilySafetyMonitor</Name>
     <Description>Initializes Family Safety monitoring and enforcement.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3558,7 +3558,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>FamilySafetyRefresh</Name>
     <Description>Synchronizes the latest settings with the Microsoft family features service.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3577,7 +3577,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>File History (maintenance mode)</Name>
     <Description>Protects user files from accidental loss by copying them to a backup location when the system is unattended.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3596,7 +3596,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>IndexerAutomaticMaintenance</Name>
     <Description>Keeps the search index up to date.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -3625,7 +3625,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Location - Actions Dialog</Name>
     <Description>Location - Actions Dialog</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3644,7 +3644,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Location - Notifications</Name>
     <Description>Location - Notifications</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3663,7 +3663,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MapsToastTask</Name>
     <Description>Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3697,7 +3697,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MapsUpdateTask</Name>
     <Description>MapsUpdateTask</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3716,7 +3716,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Microsoft Compatibility Appraiser</Name>
     <Description>Aggregates and uploads Application Telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3750,7 +3750,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Microsoft-Windows-DiskDiagnosticDataCollector</Name>
     <Description>Reports general disk and system information to Microsoft for users participating in the Customer Experience Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3784,7 +3784,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Microsoft-Windows-DiskDiagnosticResolver</Name>
     <Description>Warns users about faults reported by hard disks that support the Self Monitoring and Reporting Technology (S.M.A.R.T.) standard. This task is triggered automatically by the Diagnostic Policy Service when a S.M.A.R.T. fault is detected.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3818,7 +3818,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MNO Metadata Parser</Name>
     <Description>Mobile broadband account experience metadata parser.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -3847,7 +3847,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Mobile Broadband Accounts</Name>
     <Description>Mobile broadband account experience metadata parser</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3866,7 +3866,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MobilityManager</Name>
     <Description>Provides support for the switching of mobility enabled VPN connections if their underlying interface goes down.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -3895,7 +3895,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MS Edge - MicrosoftEdgeUpdateTaskMachineCore Task</Name>
     <Description>Keeps your Microsoft software up to date. If this task is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Microsoft software using it.</Description>
     <Type>ScheduledTask</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3934,7 +3934,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>MS Edge - MicrosoftEdgeUpdateTaskMachineUA Task</Name>
     <Description>Keeps your Microsoft software up to date. If this task is disabled or stopped, your Microsoft software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Microsoft software using it.</Description>
     <Type>ScheduledTask</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -3973,7 +3973,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Notifications</Name>
     <Description>Location notification.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -4004,7 +4004,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4023,7 +4023,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ProactiveScan</Name>
     <Description>NTFS volume health scan.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4057,7 +4057,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ProcessMemoryDiagnosticEvents</Name>
     <Description>Schedules a memory diagnostic in response to system events.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4091,7 +4091,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ProgramDataUpdater</Name>
     <Description>Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4125,7 +4125,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Proxy</Name>
     <Description>Collects and uploads autochk SQM data if opted-in to the Microsoft Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4159,7 +4159,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>QueueReporting</Name>
     <Description>Windows Error Reporting task to process queued reports.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -4190,7 +4190,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4211,7 +4211,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4232,7 +4232,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4253,7 +4253,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4272,7 +4272,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>RegIdleBackup</Name>
     <Description>Registry idle backup task.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4306,7 +4306,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ResolutionHost</Name>
     <Description>The Windows Diagnostic Infrastructure Resolution host enables interactive resolutions for system problems detected by the Diagnostic Policy Service. It is triggered when necessary by the Diagnostic Policy Service in the appropriate user session. If the Diagnostic Policy Service is not running, the task will not run.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4342,7 +4342,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4361,7 +4361,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>RunFullMemoryDiagnostic</Name>
     <Description>Detects and mitigates problems in physical memory (RAM).</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4397,7 +4397,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4418,7 +4418,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4437,7 +4437,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Scheduled</Name>
     <Description>Performs periodic maintenance of the computer system by fixing problems automatically or reporting them through the Action Center.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4471,7 +4471,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ScheduledDefrag</Name>
     <Description>This task defragments the computers hard disk drives.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4505,7 +4505,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>ServerManager</Name>
     <Description>Task for launching Initial Configuration Tasks or Server Manager at logon.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -4536,7 +4536,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4557,7 +4557,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4578,7 +4578,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4599,7 +4599,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4620,7 +4620,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4641,7 +4641,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4660,7 +4660,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>SR</Name>
     <Description>This task creates regular system protection points.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4679,7 +4679,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>StartComponentCleanup</Name>
     <Description>This job clean up components automatically when the system is not in use. This task is known to cause excessive CPU usage.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4713,7 +4713,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>StartupAppTask</Name>
     <Description>Scans startup entries and raises notification to the user if there are too many startup entries.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4749,7 +4749,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4768,7 +4768,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>TPM-Maintenance</Name>
     <Description>This task supports the Trusted Platform Module (TPM) by performing background actions on behalf of the OS.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -4799,7 +4799,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4833,7 +4833,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>UPnPHostConfig</Name>
     <Description>Sets UPnPHost service to auto-start.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -4864,7 +4864,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4883,7 +4883,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>UsbCeip</Name>
     <Description>Collects Universal Serial Bus related statistics and information about your machine and sends to the Windows Device Connectivity engineering group at Microsoft, if opted-in to Windows Customer Experience Improvement Program.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4917,7 +4917,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>VerifyWinRE</Name>
     <Description>Validates the Windows Recovery Environment.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4953,7 +4953,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -4972,7 +4972,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Defender Cache Maintenance</Name>
     <Description>Periodic maintenance task.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -5001,7 +5001,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Defender Cleanup</Name>
     <Description>Periodic cleanup task.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -5030,7 +5030,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Defender Scheduled Scan</Name>
     <Description>Periodic scan task.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -5059,7 +5059,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Defender Verification</Name>
     <Description>Periodic verification task.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -5088,7 +5088,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Error Reporting</Name>
     <Description>Windows Error Reporting task to process queued reports.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -5107,7 +5107,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Windows Media Sharing</Name>
     <Description>This task updates the cached list of folders and the security permissions on any new files in a user’s shared media library.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -5141,7 +5141,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>WinSAT</Name>
     <Description>Measures a system’s performance and capabilities.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -5175,7 +5175,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Workspace Join Recovery Check</Name>
     <Description>Performs recovery check.</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Server2019>
@@ -5206,7 +5206,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
 
 Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -5225,7 +5225,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>XblGameSaveTask</Name>
     <Description>XblGameSave Standby Task</Description>
     <Type>ScheduledTask</Type>
-    <Category>ScheduledTask</Category>
+    <Category>Scheduled Tasks</Category>
     <Order>90</Order>
     <OS>
       <Windows11>
@@ -5321,7 +5321,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     <Name>Set NewDiskPolicy to OnlineAll</Name>
     <Description>Sets the SAN policy for new disks to OnlineAll.</Description>
     <Type>PowerShell</Type>
-    <Category>MaintenanceTasks</Category>
+    <Category>Maintenance Tasks</Category>
     <Order>110</Order>
     <OS>
       <Windows11>
@@ -5388,7 +5388,7 @@ PowerCfg /SetActive $m_DesiredPlanID;]]></Script>
     <Name>Superfetch</Name>
     <Description>Maintains and improves system performance over time. If optimizing a persistent machine you may leave Superfetch enabled. If optimizing a non-persistent machine, disable it.</Description>
     <Type>PowerShell</Type>
-    <Category>OptionalComponents</Category>
+    <Category>Optional Components</Category>
     <Order>110</Order>
     <OS>
       <Windows11>
