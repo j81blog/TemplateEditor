@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <SupportedOS>
     <OS>
@@ -459,7 +459,7 @@
   </Item>
   <Item>
     <Name>Microsoft.ScreenSketch</Name>
-    <Description>Removes "Snip &amp; Sketch" application. Provides functionality of Snipping Tool with additional improvements.</Description>
+    <Description>Removes &quot;Snip &amp; Sketch&quot; application. Provides functionality of Snipping Tool with additional improvements.</Description>
     <Type>StoreApp</Type>
     <Category>Remove Applications</Category>
     <Order>60</Order>
@@ -2489,7 +2489,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-archi
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\Cellcore</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2514,18 +2514,18 @@ https://docs.microsoft.com/en-us/windows-server/security/windows-services/securi
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\DiagLog</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
     <Name>Continuous Startup Trace</Name>
-    <Description>This is a startup trace that runs all the time, with these loggers: "Microsoft-Windows-Kernel-PnP":0x48000:0x4
-"Microsoft-Windows-Kernel-WDI":0x100000000:0xff
-"Microsoft-Windows-Wininit":0x20000:0x4
-"Microsoft-Windows-Kernel-BootDiagnostics":0xffffffffffffffff:0x4
-"Microsoft-Windows-Kernel-Power":0x1:0x4
-"Microsoft-Windows-Winlogon":0x20000:0x4
-"Microsoft-Windows-Shell-Core":0x6000000:0x4
+    <Description>This is a startup trace that runs all the time, with these loggers: &quot;Microsoft-Windows-Kernel-PnP&quot;:0x48000:0x4
+&quot;Microsoft-Windows-Kernel-WDI&quot;:0x100000000:0xff
+&quot;Microsoft-Windows-Wininit&quot;:0x20000:0x4
+&quot;Microsoft-Windows-Kernel-BootDiagnostics&quot;:0xffffffffffffffff:0x4
+&quot;Microsoft-Windows-Kernel-Power&quot;:0x1:0x4
+&quot;Microsoft-Windows-Winlogon&quot;:0x20000:0x4
+&quot;Microsoft-Windows-Shell-Core&quot;:0x6000000:0x4
 On a clean state VM, this trace is running and using a very small amount of resources.  Current buffers are 4, buffer size is 16.  Those numbers reflect the amount of physical RAM reserved for this trace.  Because the VM does not use WLAN, AKA “wireless”, this trace is doing nothing for my VM now, and will not as long as I do not use wireless.  Therefore the recommendation to disable this trace and free these resources.
 https://docs.microsoft.com/en-us/windows-hardware/drivers/network/wifi-universal-driver-model</Description>
     <Type>Registry</Type>
@@ -2544,7 +2544,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/network/wifi-universal
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WDIContextLog</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2595,7 +2595,7 @@ This can have significant impact on performance.</Description>
       <Path>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy</Path>
       <Action>SetValue</Action>
       <Value>1</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2622,7 +2622,7 @@ This can have significant impact on performance.</Description>
       <Path>SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance</Path>
       <Action>SetValue</Action>
       <Value>1</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2659,7 +2659,7 @@ This can have significant impact on performance.</Description>
       <Path>SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2733,7 +2733,7 @@ This can have significant impact on performance.</Description>
       <Path>.DEFAULT\Control Panel\Desktop</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2755,7 +2755,7 @@ This can have significant impact on performance.</Description>
       <Path>SYSTEM\CurrentControlSet\Control\Power</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2792,7 +2792,7 @@ This can have significant impact on performance.</Description>
       <Path>SYSTEM\CurrentControlSet\Control\CrashControl</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2829,7 +2829,7 @@ This can have significant impact on performance.</Description>
       <Path>SYSTEM\CurrentControlSet\Control\FileSystem</Path>
       <Action>SetValue</Action>
       <Value>80000001</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2851,7 +2851,7 @@ This can have significant impact on performance.</Description>
       <Path>SOFTWARE\Policies\Microsoft\Windows\StorageSense</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2873,7 +2873,7 @@ This can have significant impact on performance.</Description>
       <Path>SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2895,7 +2895,7 @@ This can have significant impact on performance.</Description>
       <Path>SOFTWARE\Microsoft\SQMClient\Windows</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2932,7 +2932,7 @@ This can have significant impact on performance.</Description>
       <Path>System\CurrentControlSet\Control\Windows</Path>
       <Action>SetValue</Action>
       <Value>2</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2969,7 +2969,7 @@ This can have significant impact on performance.</Description>
       <Path>SYSTEM\CurrentControlSet\Services\Disk</Path>
       <Action>SetValue</Action>
       <Value>0x000000C8</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -2993,7 +2993,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3122,7 +3122,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
       <Path>Software\Policies\Microsoft\EdgeUpdate</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3168,7 +3168,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-
       <Path>Software\Policies\Microsoft\EdgeUpdate</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3197,7 +3197,7 @@ https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readybo
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\ReadyBoot</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3219,7 +3219,7 @@ https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readybo
       <Path>SOFTWARE\Policies\Microsoft\Windows\Windows Search</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3242,7 +3242,7 @@ https://docs.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiDriverIHVSession</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3266,7 +3266,7 @@ You could though leave this alone as it would almost never be started unless a u
       <Path>SYSTEM\CurrentControlSet\Control\WMI\Autologger\WiFiSession</Path>
       <Action>SetValue</Action>
       <Value>0</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -3306,7 +3306,7 @@ For more information, please refer to official Microsoft documentation: https://
       <Path>SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU</Path>
       <Action>SetValue</Action>
       <Value>1</Value>
-      <Type>Dword</Type>
+      <Type>DWord</Type>
     </Registry>
   </Item>
   <Item>
@@ -5242,7 +5242,7 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
   </Item>
   <Item>
     <Name>Disable Autoreset FTA</Name>
-    <Description>Sometimes certain Windows application can reclaim their file type association. This will generate message popups at logon. By disabling "autoreset" this behaviour will be disabled.</Description>
+    <Description>Sometimes certain Windows application can reclaim their file type association. This will generate message popups at logon. By disabling &quot;autoreset&quot; this behaviour will be disabled.</Description>
     <Type>PowerShell</Type>
     <Category>Miscellaneous</Category>
     <Order>110</Order>
@@ -5273,7 +5273,9 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[Disable-WindowsOptionalFeature -Online -FeatureName AzureArcSetup]]></Script>
+      <Script><![CDATA[Write-Host "Disable-WindowsOptionalFeature -Online -FeatureName AzureArcSetup"
+Disable-WindowsOptionalFeature -Online -FeatureName AzureArcSetup | Out-String
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5291,12 +5293,14 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[Remove-WindowsCapability -online -Name AzureArcSetup~~~~]]></Script>
+      <Script><![CDATA[Write-Host "Remove-WindowsCapability -online -Name AzureArcSetup~~~~"
+Remove-WindowsCapability -online -Name AzureArcSetup~~~~ | Out-String
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
-    <Name>Remove Windows Admin Centre Setup</Name>
-    <Description>Remove Windows Admin Centre Setup</Description>
+    <Name>Remove Windows Admin Center Setup</Name>
+    <Description>Remove Windows Admin Center Setup</Description>
     <Type>PowerShell</Type>
     <Category>Remove Features</Category>
     <Order>110</Order>
@@ -5314,7 +5318,9 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[Remove-WindowsFeature -Name WindowsAdminCenterSetup]]></Script>
+      <Script><![CDATA[Write-Host "Remove-WindowsFeature -Name WindowsAdminCenterSetup"
+Remove-WindowsFeature -Name WindowsAdminCenterSetup | Out-String
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5337,12 +5343,14 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[Set-StorageSetting -NewDiskPolicy OnlineAll]]></Script>
+      <Script><![CDATA[Write-Host "Set-StorageSetting -NewDiskPolicy OnlineAll"
+Set-StorageSetting -NewDiskPolicy OnlineAll | Out-String
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
     <Name>Set power plan to High Performance</Name>
-    <Description>Change current power plan to "High performance". If you rollback these changes, power plan will default to "Balanced".</Description>
+    <Description>Change current power plan to &quot;High performance&quot;. If you rollback these changes, power plan will default to &quot;Balanced&quot;.</Description>
     <Type>PowerShell</Type>
     <Category>Miscellaneous</Category>
     <Order>110</Order>
@@ -5370,18 +5378,21 @@ Source: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-se
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[[String]$m_DesiredPlanID = "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"; #This is High Performance
-[String]$m_CurrentPlan = powercfg /GetActiveScheme
+      <Script><![CDATA[Write-Host "Configuring Power Scheme to High Performance"
+[String]$desiredPlanID = "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"; #This is High Performance
+[String]$currentPlan = powercfg /GetActiveScheme
 
-[String]$m_CurrentPlanID = $m_CurrentPlan.Substring($m_CurrentPlan.IndexOf(":") + 2).Split(" ")[0];
+[String]$currentPlanID = $currentPlan.Substring($currentPlan.IndexOf(":") + 2).Split(" ")[0]
 
 # We want to compare current plan with "High Performance" - this is localized, so we are using scheme ID instead
-If ($m_CurrentPlanID -eq $m_DesiredPlanID) {
-    Return;
+If ($currentPlanID -eq $desiredPlanID) {
+    Write-Host "Already configured"
+    Return
 }
-
+Write-Host "PowerCfg /SetActive $desiredPlanID"
 # Try to change power management plan
-PowerCfg /SetActive $m_DesiredPlanID;]]></Script>
+PowerCfg /SetActive $desiredPlanID;
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5404,8 +5415,11 @@ PowerCfg /SetActive $m_DesiredPlanID;]]></Script>
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[Disable-MMAgent -ApplicationLaunchPrefetching -ErrorAction SilentlyContinue
-Disable-MMAgent -ApplicationPreLaunch -ErrorAction SilentlyContinue]]></Script>
+      <Script><![CDATA[Write-Host "Disable-MMAgent -ApplicationLaunchPrefetching"
+Disable-MMAgent -ApplicationLaunchPrefetching -ErrorAction SilentlyContinue
+Write-Host "Disable-MMAgent -ApplicationPreLaunch"
+Disable-MMAgent -ApplicationPreLaunch -ErrorAction SilentlyContinue
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5456,12 +5470,12 @@ Disable-MMAgent -ApplicationPreLaunch -ErrorAction SilentlyContinue]]></Script>
 )
 
 foreach ($path in $paths) {
-    Write-Host "Deleting $path" -ForegroundColor Cyan -NoNewline
+    Write-Host "Deleting $path" -NoNewLine
     if (Test-Path $path) {
         Remove-Item $path -Recurse -Force -ErrorAction SilentlyContinue
-        Write-Host " - Success" -ForegroundColor Green
+        Write-Host " - Success"
     } else {
-        Write-Host " - Not found, skipping" -ForegroundColor DarkGray
+        Write-Host " - Not found, skipping"
     }
 }]]></Script>
     </PowerShell>
@@ -5545,9 +5559,9 @@ foreach ($category in $categories) {
 
 $cleanmgr = "$env:SystemRoot\System32\cleanmgr.exe"
 if (Test-Path $cleanmgr) {
-    Write-Host "Running Disk Cleanup for all categories..." -ForegroundColor Cyan
+    Write-Host "Running Disk Cleanup for all categories..."
     Start-Process $cleanmgr -ArgumentList '/sagerun:100' -Wait
-    Write-Host "Disk Cleanup completed." -ForegroundColor Green
+    Write-Host "Disk Cleanup completed."
 }]]></Script>
     </PowerShell>
   </Item>
@@ -5588,15 +5602,15 @@ if (Test-Path $cleanmgr) {
       <Engine>powershell</Engine>
       <Script><![CDATA[[Array]$EventLogs = & wevtutil enum-logs
 $EventLogs += "System"
-Write-Host 'Clear event logs' -ForegroundColor Yellow
+Write-Host 'Clear event logs'
 # Clear all event log entries
 foreach ($EventLog in $EventLogs) {
-    Write-Host "Clearing $EventLog" -NoNewline -ForegroundColor Cyan
+    Write-Host "Clearing $EventLog" -NoNewline
     & wevtutil cl "$EventLog" 2> $null
     if ($?) {
-        Write-Host " - Success" -ForegroundColor Green
+        Write-Host " - Success"
     } else {
-        Write-Host " - Failed" -ForegroundColor Red
+        Write-Host " - Failed"
     }
 }]]></Script>
     </PowerShell>
@@ -5637,7 +5651,9 @@ Does not support analyze/rollback modes, but it is generally safe to use.</Descr
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[. $Env:WinDir\Microsoft.Net\Framework\v4.0.30319\ngen.exe Update;]]></Script>
+      <Script><![CDATA[Write-Host "NGEN running"
+. $Env:WinDir\Microsoft.Net\Framework\v4.0.30319\ngen.exe Update;
+Write-Host "Done"]]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5676,8 +5692,12 @@ Does not support analyze/rollback modes, but it is generally safe to use.</Descr
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
-      <Script><![CDATA[if ($(Test-Path $Env:WinDir\Microsoft.Net\Framework64\v4.0.30319\ngen.exe) -eq $True) {
+      <Script><![CDATA[Write-Host "NGEN running"
+if ($(Test-Path $Env:WinDir\Microsoft.Net\Framework64\v4.0.30319\ngen.exe) -eq $True) {
     . $Env:WinDir\Microsoft.Net\Framework64\v4.0.30319\ngen.exe Update
+    Write-Host "Done"
+} else {
+    Write-Host "Skipped, no x64"
 }]]></Script>
     </PowerShell>
   </Item>
@@ -5757,16 +5777,16 @@ foreach ($nic in $ghostNICs) {
     $netProps = Get-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Network\{4D36E972-E325-11CE-BFC1-08002BE10318}\$($nicProps.NetCfgInstanceId)\Connection") -ErrorAction SilentlyContinue
 
     Write-Host ""
-    Write-Host -NoNewline -ForegroundColor White "ID     : "; Write-Host -ForegroundColor Yellow ("{0:D4}" -f [int]$nic.DeviceID)
-    Write-Host -NoNewline -ForegroundColor White "Network: "; Write-Host -ForegroundColor Yellow $netProps.Name
-    Write-Host -NoNewline -ForegroundColor White "NIC    : "; Write-Host -ForegroundColor Yellow $nic.Name
-    Write-Host -NoNewline -ForegroundColor White "Actions: Removing... "
+    Write-Host -NoNewline "ID     : "; Write-Host ("{0:D4}" -f [int]$nic.DeviceID)
+    Write-Host -NoNewline "Network: "; Write-Host $netProps.Name
+    Write-Host -NoNewline "NIC    : "; Write-Host $nic.Name
+    Write-Host -NoNewline "Actions: Removing... "
 
     $result = & pnputil /remove-device "@$($nicProps.DeviceInstanceID)" 2>&1
     if ($LASTEXITCODE -eq 0) {
-        Write-Host 'Success!' -ForegroundColor Green
+        Write-Host 'Success!'
     } else {
-        Write-Host "Error [$LASTEXITCODE]" -ForegroundColor Red
+        Write-Host "Error [$LASTEXITCODE]"
     }
 }]]></Script>
     </PowerShell>
@@ -5780,27 +5800,27 @@ foreach ($nic in $ghostNICs) {
     <OS>
       <Windows11>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows11>
       <Server2025>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2025>
       <Server2022>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2022>
       <Server2019>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2019>
       <Windows10>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows10>
     </OS>
@@ -5819,13 +5839,13 @@ $dhcpProperties = @(
 
 if (Test-Path $regBase) {
     Get-ChildItem $regBase -ErrorAction SilentlyContinue | ForEach-Object {
-        Write-Host "Processing: $($_.Name)" -ForegroundColor Cyan
+        Write-Host "Processing: $($_.Name)"
         $keyPath = $_.PSPath
         $key = Get-ItemProperty -Path $keyPath
         foreach ($property in $dhcpProperties) {
             if ($null -ne $key.$property) {
                 Set-ItemProperty -Path $keyPath -Name $property -Value '' -ErrorAction SilentlyContinue
-                Write-Host "Cleared: $($_.PSChildName)\$property" -ForegroundColor Green
+                Write-Host "Cleared: $($_.PSChildName)\$property"
             }
         }
     }
@@ -5841,51 +5861,51 @@ if (Test-Path $regBase) {
     <OS>
       <Windows11>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows11>
       <Windows10>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows10>
       <Server2025>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2025>
       <Server2022>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2022>
       <Server2019>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2019>
     </OS>
     <PowerShell>
       <Engine>powershell</Engine>
       <Script><![CDATA[# Clear DNS cache
-Write-Host 'Flushing DNS cache...' -ForegroundColor Cyan
+Write-Host 'Flushing DNS cache...'
 Start-Process "$env:SystemRoot\System32\ipconfig.exe" -ArgumentList '/flushdns' -Wait -NoNewWindow
-Write-Host 'DNS cache flushed.' -ForegroundColor Green
+Write-Host 'DNS cache flushed.'
 
 # Release DHCP lease
-Write-Host 'Releasing DHCP lease...' -ForegroundColor Cyan
+Write-Host 'Releasing DHCP lease...'
 Start-Process "$env:SystemRoot\System32\ipconfig.exe" -ArgumentList '/release' -Wait -NoNewWindow
-Write-Host 'DHCP lease released.' -ForegroundColor Green
+Write-Host 'DHCP lease released.'
 
 # Clear ARP cache
-Write-Host 'Clearing ARP cache...' -ForegroundColor Cyan
+Write-Host 'Clearing ARP cache...'
 Start-Process "$env:SystemRoot\System32\arp.exe" -ArgumentList '-d' -Wait -NoNewWindow
-Write-Host 'ARP cache cleared.' -ForegroundColor Green
+Write-Host 'ARP cache cleared.'
 
 # Clear NetBIOS name cache
-Write-Host 'Clearing NetBIOS name cache...' -ForegroundColor Cyan
+Write-Host 'Clearing NetBIOS name cache...'
 Start-Process "$env:SystemRoot\System32\nbtstat.exe" -ArgumentList '-R' -Wait -NoNewWindow
-Write-Host 'NetBIOS name cache cleared.' -ForegroundColor Green]]></Script>
+Write-Host 'NetBIOS name cache cleared.']]></Script>
     </PowerShell>
   </Item>
   <Item>
@@ -5897,27 +5917,27 @@ Write-Host 'NetBIOS name cache cleared.' -ForegroundColor Green]]></Script>
     <OS>
       <Windows11>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows11>
       <Windows10>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Windows10>
       <Server2025>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2025>
       <Server2022>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2022>
       <Server2019>
         <Execute>1</Execute>
-        <Physical>1</Physical>
+        <Physical>0</Physical>
         <Virtual>1</Virtual>
       </Server2019>
     </OS>

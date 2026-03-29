@@ -53,7 +53,7 @@ param(
 
 $ProgressPreference = 'SilentlyContinue'
 
-$script:ScriptVersion = '1.1.0'
+$script:ScriptVersion = '1.2.0'
 
 # Ensure HKU: PSDrive is available (no-op if already present)
 $null = New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS -ErrorAction SilentlyContinue
@@ -63,28 +63,43 @@ $script:DefaultUserMounted = $false
 
 #region Logging
 
-# Resolve log file path — fall back to $Env:Temp if the requested path is not writable
 function Initialize-LogFile {
     param([string]$Directory)
 
     $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
-    $fileName = "WindowsOptimization_$timestamp.jsonl"
+    $fileName = "WindowsOptimization_$timestamp.log"
 
-    # Try requested directory first, then $Env:Temp
     foreach ($dir in @($Directory, $Env:Temp)) {
         try {
             if (-not (Test-Path -Path $dir)) {
                 New-Item -Path $dir -ItemType Directory -Force -ErrorAction Stop | Out-Null
             }
             $candidate = Join-Path $dir $fileName
-            # Test writability with a zero-byte probe
             [System.IO.File]::OpenWrite($candidate).Close()
             return $candidate
         } catch {
             continue
         }
     }
-    return $null  # logging unavailable
+    return $null
+}
+
+function Write-LogHeader {
+    if ($null -eq $script:LogFile) { return }
+    try {
+        $header = @(
+            "Date       : $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+            "RunId      : $($script:RunId)"
+            "Version    : $($script:ScriptVersion)"
+            "User       : $Env:USERDOMAIN\$Env:USERNAME"
+            "Host       : $Env:COMPUTERNAME"
+            "OS         : $($script:LogContext['os'])"
+            "Build      : $($script:LogContext['build'])"
+            "LogLevel   : $($script:LogLevel)"
+            "---"
+        )
+        $header | Add-Content -Path $script:LogFile -Encoding UTF8
+    } catch { }
 }
 
 $script:LogFile = Initialize-LogFile -Directory $LogPath
@@ -103,33 +118,17 @@ function Write-Log {
 
     if ($null -eq $script:LogFile) { return }
 
-    # Apply LogLevel filter
     $write = switch ($script:LogLevel) {
-        'Info' { $Level -in @('Error', 'Warning') }
+        'Info'    { $Level -in @('Error', 'Warning') }
         'Verbose' { $Level -in @('Error', 'Warning', 'Success', 'Info') }
-        'Debug' { $true }
+        'Debug'   { $true }
     }
     if (-not $write) { return }
 
-    $entry = [ordered]@{
-        timestamp     = (Get-Date -Format 'yyyy-MM-ddTHH:mm:ss.fff')
-        runId         = $script:RunId
-        scriptVersion = $script:ScriptVersion
-        username      = "$Env:USERDOMAIN\$Env:USERNAME"
-        hostname      = $Env:COMPUTERNAME
-        os            = $script:LogContext['os']
-        build         = $script:LogContext['build']
-        level         = $Level
-        type          = $Type
-        item          = $Item
-        message       = $Message
-    }
-
     try {
-        $entry | ConvertTo-Json -Compress | Add-Content -Path $script:LogFile -Encoding UTF8
-    } catch {
-        # Silently ignore — log write failure must never break the main flow
-    }
+        $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss.fff')`t$Level`t$Type`t$Item`t$Message"
+        $line | Add-Content -Path $script:LogFile -Encoding UTF8
+    } catch { }
 }
 
 #endregion Logging
@@ -307,6 +306,7 @@ function Invoke-PowerShellAction {
         [System.Xml.XmlElement]$Item
     )
 
+    $engine = if ([string]::IsNullOrWhiteSpace($Item.PowerShell.Engine)) { 'powershell' } else { $Item.PowerShell.Engine.Trim().ToLower() }
     $script = $Item.PowerShell.Script.'#cdata-section'
 
     if ([string]::IsNullOrWhiteSpace($script)) {
@@ -314,46 +314,105 @@ function Invoke-PowerShellAction {
         return New-ActionResult 'Skipped' 'Skipped (empty script)'
     }
 
-    # Print "Started" line before running so any script output appears beneath it
     Write-ItemLine -TypeLabel 'PoSh Script' -Name $Item.Name -StatusText 'Started' -StatusColor 'Cyan'
 
+    # pwsh — child process (different binary), output always printed and logged
+    if ($engine -eq 'pwsh') {
+        $pwshExe = if (Get-Command 'pwsh' -ErrorAction SilentlyContinue) { 'pwsh' } else { $null }
+        if (-not $pwshExe) {
+            Write-Log -Level 'Error' -Type 'PowerShell' -Item $Item.Name -Message 'pwsh not found on this system'
+            return New-ActionResult 'Failed' 'pwsh not found on this system'
+        }
+        try {
+            $tmpOut = [System.IO.Path]::GetTempFileName()
+            $tmpErr = "$tmpOut.err"
+            $encodedCommand = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($script))
+            $proc = Start-Process -FilePath $pwshExe `
+                -ArgumentList @('-NonInteractive', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', $encodedCommand) `
+                -RedirectStandardOutput $tmpOut `
+                -RedirectStandardError  $tmpErr `
+                -NoNewWindow -Wait -PassThru
+
+            $outLines = if (Test-Path $tmpOut) { Get-Content $tmpOut } else { @() }
+            $errLines = if (Test-Path $tmpErr) { Get-Content $tmpErr } else { @() }
+            Remove-Item $tmpOut, $tmpErr -Force -ErrorAction SilentlyContinue
+
+            foreach ($line in $outLines) { Write-Host $line -ForegroundColor White ; Write-Log -Level 'Info' -Type 'PowerShell' -Item $Item.Name -Message "OUT:  $line" }
+            foreach ($line in $errLines) { Write-Host $line -ForegroundColor Red   ; Write-Log -Level 'Error'   -Type 'PowerShell' -Item $Item.Name -Message "ERR:  $line" }
+
+            if ($proc.ExitCode -ne 0 -or $errLines.Count -gt 0) {
+                $errMsg = if ($errLines.Count -gt 0) { $errLines[0] } else { "Exit code $($proc.ExitCode)" }
+                Write-Log -Level 'Error' -Type 'PowerShell' -Item $Item.Name -Message $errMsg
+                return New-ActionResult 'Failed' $errMsg
+            }
+
+            Write-Log -Level 'Success' -Type 'PowerShell' -Item $Item.Name -Message 'Script executed successfully'
+            return New-ActionResult 'Success'
+        } catch {
+            Write-Log -Level 'Error' -Type 'PowerShell' -Item $Item.Name -Message $_.Exception.Message
+            return New-ActionResult 'Failed' $_.Exception.Message
+        }
+    }
+
+    # powershell — runspace in current process, live output gated by LogLevel
     try {
         $rs = [runspacefactory]::CreateRunspace()
         $rs.ApartmentState = 'STA'
-        $rs.ThreadOptions = 'ReuseThread'
+        $rs.ThreadOptions  = 'ReuseThread'
         $rs.Open()
 
         $ps = [powershell]::Create()
         $ps.Runspace = $rs
         $null = $ps.AddScript($script)
-
-        # Invoke() runs synchronously on the calling thread — no cross-thread host access issues.
-        # Write-Host in the script goes to Information stream; we print all streams after completion.
         $results = $ps.Invoke()
 
-        $logLines = [System.Collections.Generic.List[string]]::new()
-
         $showOutput = $script:LogLevel -in @('Verbose', 'Debug')
+        $logLines   = [System.Collections.Generic.List[string]]::new()
 
-        foreach ($o in $results) { if ($showOutput) { Write-Host "$o" -ForegroundColor White } ; $logLines.Add("OUT:  $(($o | Out-String).Trim())") }
-        foreach ($o in $ps.Streams.Information) { if ($showOutput) { Write-Host $o.MessageData -ForegroundColor White } ; $logLines.Add("INFO: $(($o.MessageData | Out-String).Trim())") }
-        foreach ($o in $ps.Streams.Warning) { if ($showOutput) { Write-Host "$o" -ForegroundColor Yellow } ; $logLines.Add("WARN: $(($o | Out-String).Trim())") }
-        foreach ($o in $ps.Streams.Error) { if ($showOutput) { Write-Host "$o" -ForegroundColor Red } ; $logLines.Add("ERR:  $(($o | Out-String).Trim())") }
+        foreach ($o in $results) {
+            $text = if ($o -is [string]) { $o } else { ($o | Out-String).Trim() }
+            if ($text) {
+                if ($showOutput) { Write-Host $text -ForegroundColor White }
+                $logLines.Add("OUT:  $text")
+            }
+        }
+
+        foreach ($o in $ps.Streams.Information) {
+            $text = if ($o.MessageData -is [System.Management.Automation.HostInformationMessage]) {
+                $o.MessageData.Message
+            } else { "$($o.MessageData)" }
+            if ($text) {
+                if ($showOutput) { Write-Host $text -ForegroundColor White }
+                $logLines.Add("INFO: $text")
+            }
+        }
+
+        foreach ($o in $ps.Streams.Warning) {
+            $text = "$o"
+            if ($showOutput) { Write-Host $text -ForegroundColor Yellow }
+            $logLines.Add("WARN: $text")
+        }
+
+        foreach ($o in $ps.Streams.Error) {
+            $text = "$o"
+            if ($showOutput) { Write-Host $text -ForegroundColor Red }
+            $logLines.Add("ERR:  $text")
+        }
 
         $hasErrors = $ps.Streams.Error.Count -gt 0
-        $errMsg = if ($hasErrors) { $ps.Streams.Error[0].ToString() } else { '' }
+        $errMsg    = if ($hasErrors) { "$($ps.Streams.Error[0])" } else { '' }
 
         $ps.Dispose()
         $rs.Dispose()
 
+        foreach ($line in $logLines) { Write-Log -Level 'Info' -Type 'PowerShell' -Item $Item.Name -Message $line }
+
         if ($hasErrors) {
             Write-Log -Level 'Error' -Type 'PowerShell' -Item $Item.Name -Message $errMsg
-            Write-Log -Level 'Debug' -Type 'PowerShell' -Item $Item.Name -Message ($logLines -join "`n")
             return New-ActionResult 'Failed' $errMsg
         }
 
         Write-Log -Level 'Success' -Type 'PowerShell' -Item $Item.Name -Message 'Script executed successfully'
-        Write-Log -Level 'Debug' -Type 'PowerShell' -Item $Item.Name -Message ($logLines -join "`n")
         return New-ActionResult 'Success'
     } catch {
         Write-Log -Level 'Error' -Type 'PowerShell' -Item $Item.Name -Message $_.Exception.Message
@@ -694,6 +753,10 @@ if (Test-Path -Path $FilePath) {
 
 #region OS Detection
 
+if ($SkipWarning.IsPresent -eq $false ) {
+    Write-Warning "By running this script, you acknowledge that it will make changes to your system based on the definitions in the XML file. It's recommended to review the XML content and ensure you have backups or restore points as needed before proceeding. To suppress this warning in future runs, use the -SkipWarning switch."
+}
+
 $osDetails = Get-CimInstance -ClassName Win32_OperatingSystem
 $machineDetails = Get-SystemPlatform
 $currentBuild = $osDetails.BuildNumber
@@ -720,7 +783,8 @@ if ($null -eq $osNode) {
 $script:LogContext['os'] = $OSName
 $script:LogContext['build'] = $currentBuild
 
-Write-Log -Level 'Info' -Message "Script started — OS: $OSName, Build: $currentBuild, LogLevel: $LogLevel, ExcludeOrder: $($ExcludeOrder -join ',')"
+Write-LogHeader
+Write-Log -Level 'Info' -Message "Script started — ExcludeOrder: $($ExcludeOrder -join ',')"
 
 if ($script:LogFile) {
     Write-Host ''
@@ -731,10 +795,6 @@ if ($script:LogFile) {
 
 
 #region Execute Items
-
-if ($SkipWarning.IsPresent -eq $false ) {
-    Write-Warning "By running this script, you acknowledge that it will make changes to your system based on the definitions in the XML file. It's recommended to review the XML content and ensure you have backups or restore points as needed before proceeding. To suppress this warning in future runs, use the -SkipWarning switch."
-}
 
 if ($null -eq $OS) {
     Write-Warning "No specific optimizations defined for: $OSName"
@@ -751,6 +811,7 @@ if ($null -eq $OS) {
     $failedCount = 0
 
     Write-Host ''
+    Write-Host "Template     : $($FilePath)" -ForegroundColor White
     Write-Host "OS           : $OSName (Build $currentBuild)" -ForegroundColor White
     Write-Host "Model        : $($machineDetails.Model)" -ForegroundColor White
     Write-Host "Manufacturer : $($machineDetails.Manufacturer)" -ForegroundColor White
@@ -780,7 +841,7 @@ if ($null -eq $OS) {
                     $label = if ($typeMap.ContainsKey($type)) { $typeMap[$type].DisplayName } else { $type.Substring(0, [Math]::Min($type.Length, 11)) }
                     $result = New-ActionResult 'Skipped' 'Skipped (N/A for Virtual)'
                     Write-ItemResult -TypeLabel $label -Name $item.Name -Result $result
-                    Write-Log -Level 'Verbose' -Type $type -Item $item.Name -Message 'Skipped (N/A for Virtual)'
+                    Write-Log -Level 'Info' -Type $type -Item $item.Name -Message 'Skipped (N/A for Virtual)'
                     continue
                 }
             } else {
@@ -789,7 +850,7 @@ if ($null -eq $OS) {
                     $label = if ($typeMap.ContainsKey($type)) { $typeMap[$type].DisplayName } else { $type.Substring(0, [Math]::Min($type.Length, 11)) }
                     $result = New-ActionResult 'Skipped' 'Skipped (N/A for Physical)'
                     Write-ItemResult -TypeLabel $label -Name $item.Name -Result $result
-                    Write-Log -Level 'Verbose' -Type $type -Item $item.Name -Message 'Skipped (N/A for Physical)'
+                    Write-Log -Level 'Info' -Type $type -Item $item.Name -Message 'Skipped (N/A for Physical)'
                     continue
                 }
             }
@@ -837,8 +898,8 @@ if ($null -eq $OS) {
 # SIG # Begin signature block
 # MIImdwYJKoZIhvcNAQcCoIImaDCCJmQCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCABIkPl/5NPNw57
-# ppyjzETUCaTnWpIZrfPJD82m3y+M06CCIAowggYUMIID/KADAgECAhB6I67aU2mW
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCD+PE6i9VHsyKNA
+# RhJzYEyYI62oooONzjwqd2TVkz72yqCCIAowggYUMIID/KADAgECAhB6I67aU2mW
 # D5HIPlz0x+M/MA0GCSqGSIb3DQEBDAUAMFcxCzAJBgNVBAYTAkdCMRgwFgYDVQQK
 # Ew9TZWN0aWdvIExpbWl0ZWQxLjAsBgNVBAMTJVNlY3RpZ28gUHVibGljIFRpbWUg
 # U3RhbXBpbmcgUm9vdCBSNDYwHhcNMjEwMzIyMDAwMDAwWhcNMzYwMzIxMjM1OTU5
@@ -1014,31 +1075,31 @@ if ($null -eq $OS) {
 # cnR1bSBDb2RlIFNpZ25pbmcgMjAyMSBDQQIQCDJPnbfakW9j5PKjPF5dUTANBglg
 # hkgBZQMEAgEFAKCBhDAYBgorBgEEAYI3AgEMMQowCKACgAChAoAAMBkGCSqGSIb3
 # DQEJAzEMBgorBgEEAYI3AgEEMBwGCisGAQQBgjcCAQsxDjAMBgorBgEEAYI3AgEV
-# MC8GCSqGSIb3DQEJBDEiBCCdcZN+VimSDF9CVGSrZ5y+xvElPjWv/zRgPhsY3+Yv
-# gTANBgkqhkiG9w0BAQEFAASCAYA12FZt7tRs4rwzR2O/1vbXAe4/DZ8gym6G1bna
-# XbDODrqULQHjtIBXumZNGWYcYOjlx5OUwHIMrP8tGIsFN0qxYLyvs6sMkPw3SciY
-# eFGaRbjnc2BJQKHlPftg/YpPrjGL5pIa5TRPysS6JE2C/2/jPEqLbKJVD7ROY8i1
-# ui9TljgIi4SzZ1U35gvvHoLc1IEu4OyQ0PgYuWz4T9ZwN9zWzCSajgCOg+IwMAmI
-# q97eCe2xXN3NgEJCg8m9ioNvPyGp/VkaGue3XscGeoVkyb0nLFUcjGqYo2rbWkU7
-# k/+BFV5xz9DgdOYXBFTaOMUaRYq7CiE1E1TARK2k84nGS+z+Qch9M66KFOU1AL60
-# QZgdBMPI3UzByM4velCVV6H09J+7Yx7iaC/ZJbcbSyZT0Hbhe0LWYCR6itPv8nGW
-# 1kBQA+LBxcLU8yV8tth4RWJwkAQBymK5sX3+IUrbZDquRKm0BMghkcBtNhlKZvlo
-# BSUvCDtqJID0FLiNHs23g0AqzJWhggMjMIIDHwYJKoZIhvcNAQkGMYIDEDCCAwwC
+# MC8GCSqGSIb3DQEJBDEiBCDnO80xcSKxUVgsdQDxiR97n3Y6Cvz2E0wW27w3IIxb
+# KzANBgkqhkiG9w0BAQEFAASCAYBKaO6wHIaFj4jeS3l18fHmXlKbaJeYIkHzSx5S
+# thJtEK4In4y/MGFXPuW8mfks5ojauuS02Yav2iLqxPe5cp2CRGn/wysi3pkCLt8c
+# S6pH728maojDOdoaz3KwxV7TllZ+faH0mqLa0A0jBIZt8/BSfPWQLttyLtOPNDDR
+# LZuOGQyX8UrZP9Hv8QBMk6POS6eesdCJncXhRuoLlmu93ydKWycPAFOtF6XxOp8+
+# wDtPZBX59ASMxi26Qvq4qQqZQg21O+vfGj3l/5FDuhMHkNOuC3gWmoLLSfq5DorE
+# II9gn2YpGZUY2ykyKk65uHPGKQNasx1KZvnzFKlloio5L/oUTZLSz8aLPtRt0SqT
+# PoTTSS4VKFR+dVaSdedCMPEVD3ASSJOyXsYPAdljAzAAXByt7Xnw01W4H7ScoB4F
+# XHQ2EueLocpir4B0fk8mUztcHcVnlXUSCI8DZo0tOFrHopWrCUypCXIJEWMP7Stx
+# d9MSB6vWDb9mBAutnLU/opVtUgehggMjMIIDHwYJKoZIhvcNAQkGMYIDEDCCAwwC
 # AQEwajBVMQswCQYDVQQGEwJHQjEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMSww
 # KgYDVQQDEyNTZWN0aWdvIFB1YmxpYyBUaW1lIFN0YW1waW5nIENBIFIzNgIRAKQp
 # O24e3denNAiHrXpOtyQwDQYJYIZIAWUDBAICBQCgeTAYBgkqhkiG9w0BCQMxCwYJ
-# KoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yNjAzMjcyMDUzMjZaMD8GCSqGSIb3
-# DQEJBDEyBDAG1SzIgiiyPlp/Hz8HWspqXjWRL5MaDRktLaNQE7UFNzief1t1/G57
-# S25GXiHK0JUwDQYJKoZIhvcNAQEBBQAEggIAtFQmhqHzyDxdO3BbcBbX5KmWA8cM
-# AeqNKN702/YqwSrEQ1uEUdzpN6AREOUM9sqqQ2ahmRTn5Y1JlkptSZj63L79g02V
-# hzi2BIJxicpRE/8ld1wWSPduelDWSnDSE3QIzfh/kijjrTO4EHQeLShNl8ow3Zl4
-# F9ymi6HoVJDlWFxFGN0Uq7PT5IpvOeXLgQdYITf0fxEUnRV94n2OR6Y9/0wI3/Vq
-# XesHdYDlIO0vqhDHHD8rNFOtfihPFn32AgNRGBhA+m++KmkvsiSuDG9JdViXn4ix
-# Kd6WyWKAB9AdO8w9wJR/NUTJienyAekLF8bAWyAw8bYtwb330IQSUlk2cLMK7odG
-# rW0EIiJdJwk9ty7EXVQANAFDfryETZ2xtfY9heMqEi2WJjiuO61Jubq5r+rXVXFA
-# u/WxHtaDb8TovxCWa4DUXypEjzEc7ZLH2KG9j8gQ6XMlNC5aLYgcG+d7LcWGRCnZ
-# AJFv4+UcXlLU9IMzPtEsgazrAcYSYNIeqCEVZ1hRfl7YcF4aOFar3OyP21Ryu3k3
-# QOAZFSLxf8Irf4R0yrYyLjq64OMBO9bMAgjNNFX7JlhI06OQAQDGxitV9zCLyDcw
-# t8NMurewlhtuUdi8rRoYHVxqqs9BZc6y4VX/loEjPH0gIAegDJ6p/fmihXQobHEI
-# A6vr52ck7GDSgeg=
+# KoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yNjAzMjkxOTQyMjlaMD8GCSqGSIb3
+# DQEJBDEyBDBk7DKQpDq0nu7Mlho01nivXgCZQsgCO5ngRq7h7Kul/B5PhDvWShOz
+# k+9LwkpcncAwDQYJKoZIhvcNAQEBBQAEggIAGQ4nNvICQavmEAMMdlYihtNOj99F
+# VXuQd22YeEmJ1kO6yDLGtbdtX69uHoyjpo33MavDAobU+C6nknB46NMBobsdMjrq
+# IE3vRJfpBimlza/TgXzmB0zJ7KCHL2x2HYWdSROSbNV4v6oZGnOrxpdNLP6p/n6J
+# lYQWuZx3WIiyvUBsnI33a+txq+UVL81/UYmggMv2Sri5whsQRXJr264ghmDSq9A7
+# +1MkMVncE1yJQPJNcBQwg0z+58tb1repetdjLtlD/YwOzKYbuvTdUF6m3I9NE35b
+# 2z1HKjkWBjM9oFrq5jxysGpllcBTen01bMqIrra5QALnFH4ZUil7lkp3W/bVLZrM
+# +8gYBIDyKV2HfrmA54M7HsHIjhSNA8SHzNs+B2dcxN0YH4QIWsdcChYaFMqm5k6D
+# xwIZGY/TeM26ubXxVZ9gRr0bqBU7fQ8Se8+FrcEg1Iip3nLolFngLL8hoquQWwUj
+# tvw+IGhZBJyG7kyNjAKwAG8aTbtGeyUMei187eFhiOsEM3jRNNPMbdf0ZQ3jSKuz
+# l3PZcik+fQGwvsI2V2iOzd22aaxUK8D8Gfs0h/UxDutolfwBF9GxGfomtSeaDJYF
+# CD9FBHL12Z0z7eqp2UIp8Agao0l/OFlV7NTXp2ZCKcBuMWJBEmemNb0vmjkb+yeG
+# Rk0k1RbzxBWt8Ps=
 # SIG # End signature block

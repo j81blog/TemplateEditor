@@ -18,7 +18,7 @@
           <div class="field">
             <label class="field-lbl">Action *</label>
             <select class="field-inp" :value="p.action" @change="emit('update', { action: ($event.target as HTMLSelectElement).value })">
-              <option>Remove</option><option>Delete</option><option>Rename</option>
+              <option>Remove</option><option>Rename</option>
             </select>
           </div>
         </div>

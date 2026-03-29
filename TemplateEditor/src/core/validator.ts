@@ -4,7 +4,7 @@ const REG_ACTIONS = ['SetValue','DeleteKey','DeleteKeyRecursively','DeleteValue'
 const REG_TYPES   = ['String','ExpandString','Binary','DWord','MultiString','Qword']
 const SVC_ACTIONS = ['Disabled','Automatic','Manual']
 const ST_ACTIONS  = ['Enabled','Disabled']
-const FF_ACTIONS  = ['Delete','Rename','Remove']
+const FF_ACTIONS  = ['Rename','Remove']
 const FF_TYPES    = ['File','Folder']
 
 export function validate(doc: TemplateDocument): ValidationResult {
