@@ -40,7 +40,7 @@
     </div>
     <div class="action-row">
       <button class="sb-btn" :class="{ active: uiStore.viewMode==='category' }" @click="uiStore.setViewMode('category')">Category</button>
-      <button class="sb-btn" :class="{ active: uiStore.viewMode==='order' }" @click="uiStore.setViewMode('order')">Order</button>
+      <button class="sb-btn" :class="{ active: uiStore.viewMode==='order' }" @click="uiStore.setViewMode('order')">Deploy Order</button>
       <button v-if="uiStore.viewMode==='category'" class="sb-btn" @click="uiStore.toggleSort">
         {{ uiStore.sortDir === 'asc' ? 'A→Z' : 'Z→A' }}
       </button>

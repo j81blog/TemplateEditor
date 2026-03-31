@@ -44,7 +44,7 @@
                 <div class="fg">
                   <div class="field">
                     <label class="field-lbl">Description</label>
-                    <input class="field-inp" :value="item.description" @input="update('description', ($event.target as HTMLInputElement).value)" />
+                    <textarea ref="descRef" class="field-inp field-ta" rows="1" :value="item.description" @input="onDescInput" />
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineAsyncComponent, ref, nextTick } from 'vue'
+import { computed, defineAsyncComponent, ref, nextTick, watch } from 'vue'
 import { documentStore } from '../../store/document'
 import { uiStore } from '../../store/ui'
 import type { TemplateItem, ItemType, ItemPayload } from '../../core/types'
@@ -153,6 +153,24 @@ function onTypeChange(newType: ItemType) {
   documentStore.updateItem(item.value.id, { type: newType, typeRaw: newType, payload: defaultPayloads[newType] })
 }
 
+const descRef = ref<HTMLTextAreaElement | null>(null)
+
+function onDescInput(e: Event) {
+  const el = e.target as HTMLTextAreaElement
+  update('description', el.value)
+  el.style.height = 'auto'
+  el.style.height = el.scrollHeight + 'px'
+}
+
+watch(() => item.value?.id, () => {
+  nextTick(() => {
+    if (descRef.value) {
+      descRef.value.style.height = 'auto'
+      descRef.value.style.height = descRef.value.scrollHeight + 'px'
+    }
+  })
+})
+
 const showCatDialog = ref(false)
 const newCatName = ref('')
 const catError = ref('')
@@ -199,9 +217,10 @@ function onPayloadUpdate(patch: Partial<ItemPayload>) {
 .issue-row.warning { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.2); color: #fbbf24; }
 .issue-icon { font-size: 10px; flex-shrink: 0; margin-top: 1px; }
 
+.field-ta { resize: none; overflow-y: auto; line-height: 1.5; max-height: calc(5 * 1.5em + 14px); }
 .cat-row { display: flex; align-items: center; gap: 4px; }
 .cat-row .field-inp { flex: 1; min-width: 0; }
-.cat-add-btn { flex-shrink: 0; width: 22px; height: 22px; padding: 0; border: 1px solid var(--field-border); border-radius: 4px; background: var(--field-bg); color: var(--field-txt); font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.cat-add-btn { flex-shrink: 0; width: 22px; align-self: stretch; padding: 0; border: 1px solid var(--field-border); border-radius: 4px; background: var(--field-bg); color: var(--field-txt); font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .cat-add-btn:hover { background: var(--bc-badge-bg); }
 
 .dlg-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 1000; }

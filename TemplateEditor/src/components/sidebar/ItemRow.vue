@@ -3,10 +3,11 @@
     <div class="item-top">
       <img :src="iconSrc" class="item-icon" :alt="item.type" :style="{ filter: iconFilter }" />
       <span class="item-name">{{ item.name || '(unnamed)' }}</span>
+      <span class="item-order-badge">{{ item.order }}</span>
       <span v-if="hasError" class="item-error">!</span>
     </div>
     <div v-if="item.description" class="item-desc">{{ item.description }}</div>
-    <div v-if="viewMode === 'order'" class="item-meta">{{ item.category }} · {{ item.order }}</div>
+    <div v-if="viewMode === 'order'" class="item-meta">{{ item.category }}</div>
   </div>
 </template>
 
@@ -51,6 +52,7 @@ const hasError = computed(() => documentStore.validationResult.errors.some(e => 
 .item-top { display: flex; align-items: center; gap: 8px; }
 .item-icon { width: 16px; height: 16px; flex-shrink: 0; }
 .item-name { font-size: 12px; font-weight: 600; color: var(--item-name); flex: 1; }
+.item-order-badge { font-size: 10px; font-weight: 600; color: var(--item-desc); background: var(--sb-border); padding: 1px 5px; border-radius: 3px; flex-shrink: 0; }
 .item-error { font-size: 10px; font-weight: 700; color: #f87171; background: rgba(248,113,113,0.1); padding: 1px 5px; border-radius: 3px; }
 .item-desc { font-size: 10px; color: var(--item-desc); margin-left: 24px; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .item-meta { font-size: 10px; color: var(--item-desc); margin-left: 24px; margin-top: 2px; }
