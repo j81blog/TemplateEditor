@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { initTooltips } from './tooltip'
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura'
 import 'primeicons/primeicons.css'
@@ -16,3 +17,4 @@ app.use(PrimeVue, {
   }
 })
 app.mount('#app')
+initTooltips()

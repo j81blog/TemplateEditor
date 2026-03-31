@@ -5,19 +5,19 @@
       <span class="nav-title">Template Editor</span>
     </div>
     <div class="nav-actions">
-      <button class="nav-btn" @click="emit('new')">New from Default</button>
-      <button class="nav-btn" @click="emit('open')">Open Template</button>
-      <button class="nav-btn download" :disabled="documentStore.hasErrors" @click="emit('save')">Download XML</button>
-      <button class="nav-btn download" @click="downloadScript">Download Script</button>
+      <button class="nav-btn" data-tooltip="Create a new template from built-in defaults" @click="emit('new')">New from Default</button>
+      <button class="nav-btn" data-tooltip="Open an existing XML template file" @click="emit('open')">Open Template</button>
+      <button class="nav-btn download" :disabled="!documentStore.document?.items.length || !documentStore.document?.supportedOs.length || documentStore.hasErrors" data-tooltip="Download the template as an XML file" @click="emit('save')">Download XML</button>
+      <button class="nav-btn download" data-tooltip="Download the PowerShell deployment script" @click="downloadScript">Download Script</button>
       <div class="nav-div"></div>
-      <button class="nav-btn" @click="emit('manageos')">Manage OS</button>
-      <button class="nav-btn" @click="emit('pdf')">PDF Report</button>
+      <button class="nav-btn" data-tooltip="Add, edit or remove supported operating systems" @click="emit('manageos')">Manage OS</button>
+      <button class="nav-btn" :disabled="!documentStore.document?.items.length || !documentStore.document?.supportedOs.length" data-tooltip="Generate a PDF summary report" @click="emit('pdf')">PDF Report</button>
       <div class="nav-div"></div>
       <span class="nav-spacer"></span>
       <span v-if="documentStore.filename" class="nav-filename">{{ documentStore.filename }}</span>
       <span v-if="documentStore.dirty" class="nav-modified"><span class="mod-dot"></span>Modified</span>
-      <button class="theme-toggle" @click="toggleTheme">{{ isDark ? '☀ Light' : '☾ Dark' }}</button>
-      <button class="nav-btn nav-hamburger" @click="emit('togglesidebar')">☰</button>
+      <button class="theme-toggle" data-tooltip="Toggle light / dark theme" @click="toggleTheme">{{ isDark ? '☀ Light' : '☾ Dark' }}</button>
+      <button class="nav-btn nav-hamburger" data-tooltip="Toggle sidebar" @click="emit('togglesidebar')">☰</button>
     </div>
   </nav>
 </template>

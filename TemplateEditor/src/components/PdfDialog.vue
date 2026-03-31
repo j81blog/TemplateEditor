@@ -4,7 +4,7 @@
       <div class="dialog">
         <div class="dlg-header">
           <span class="dlg-title">Generate Report</span>
-          <button class="dlg-close" @click="emit('update:visible', false)">×</button>
+          <button class="dlg-close" data-tooltip="Close without generating" @click="emit('update:visible', false)">×</button>
         </div>
 
         <div class="dlg-body">
@@ -39,8 +39,8 @@
         </div>
 
         <div class="dlg-footer">
-          <button class="dlg-btn" @click="emit('update:visible', false)">Cancel</button>
-          <button class="dlg-btn primary" @click="onExport">Generate</button>
+          <button class="dlg-btn" data-tooltip="Cancel and close" @click="emit('update:visible', false)">Cancel</button>
+          <button class="dlg-btn primary" data-tooltip="Generate and download the PDF report" @click="onExport">Generate</button>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <div class="sb-search">
     <div class="search-row">
       <input v-model="uiStore.filters.search" class="sb-input" placeholder="Search items…" />
-      <button v-if="uiStore.filters.search" class="x-btn" @click="uiStore.setFilter('search','')">×</button>
+      <button v-if="uiStore.filters.search" class="x-btn" data-tooltip="Clear search filter" @click="uiStore.setFilter('search','')">×</button>
     </div>
     <div class="filters-grid">
       <div class="filter-group">
@@ -34,14 +34,14 @@
 
   <div class="sb-actions">
     <div class="action-row">
-      <button class="sb-btn add" @click="onAdd">+ New</button>
-      <button class="sb-btn dup" :disabled="!uiStore.selectedId" @click="onDuplicate">Duplicate</button>
-      <button class="sb-btn del" :disabled="!uiStore.selectedId" @click="onDelete">Delete</button>
+      <button class="sb-btn add" data-tooltip="Add a new item" @click="onAdd">+ New</button>
+      <button class="sb-btn dup" :disabled="!uiStore.selectedId" data-tooltip="Duplicate the selected item" @click="onDuplicate">Duplicate</button>
+      <button class="sb-btn del" :disabled="!uiStore.selectedId" data-tooltip="Delete the selected item" @click="onDelete">Delete</button>
     </div>
     <div class="action-row">
-      <button class="sb-btn" :class="{ active: uiStore.viewMode==='category' }" @click="uiStore.setViewMode('category')">Category</button>
-      <button class="sb-btn" :class="{ active: uiStore.viewMode==='order' }" @click="uiStore.setViewMode('order')">Deploy Order</button>
-      <button v-if="uiStore.viewMode==='category'" class="sb-btn" @click="uiStore.toggleSort">
+      <button class="sb-btn" :class="{ active: uiStore.viewMode==='category' }" data-tooltip="Group and sort items by category" @click="uiStore.setViewMode('category')">Category</button>
+      <button class="sb-btn" :class="{ active: uiStore.viewMode==='order' }" data-tooltip="Sort items by deploy order number" @click="uiStore.setViewMode('order')">Deploy Order</button>
+      <button v-if="uiStore.viewMode==='category'" class="sb-btn" data-tooltip="Toggle alphabetical sort direction" @click="uiStore.toggleSort">
         {{ uiStore.sortDir === 'asc' ? 'A→Z' : 'Z→A' }}
       </button>
     </div>

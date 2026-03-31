@@ -206,6 +206,25 @@
 .field-inp { width: 100%; background: transparent; border: none; outline: none; color: var(--field-txt); font-size: 12px; font-family: 'Montserrat', sans-serif; padding-top: 2px; }
 select.field-inp { cursor: pointer; }
 
+/* ── Tooltips ───────────────────────────────────────── */
+.app-tooltip {
+  position: fixed;
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #2d3f57;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 5px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  display: none;
+  z-index: 99999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.12s ease;
+}
+
 /* ── Reset ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Montserrat', sans-serif; background: var(--right-bg); }

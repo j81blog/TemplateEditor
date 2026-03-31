@@ -4,15 +4,15 @@
       <div class="dialog">
         <div class="dlg-header">
           <span class="dlg-title">Manage Supported OS</span>
-          <button class="dlg-close" @click="onCancel">×</button>
+          <button class="dlg-close" data-tooltip="Close without saving" @click="onCancel">×</button>
         </div>
 
         <div class="dlg-body">
           <!-- Left: OS list -->
           <div class="dlg-list">
             <div class="dlg-list-actions">
-              <button class="dlg-btn primary" @click="onAddOs">Add OS</button>
-              <button class="dlg-btn danger" :disabled="!selectedTag" @click="onDeleteOs">Delete OS</button>
+              <button class="dlg-btn primary" data-tooltip="Add a new operating system" @click="onAddOs">Add OS</button>
+              <button class="dlg-btn danger" :disabled="!selectedTag" data-tooltip="Delete the selected operating system" @click="onDeleteOs">Delete OS</button>
             </div>
             <div class="os-list-items">
               <div v-for="os in draft" :key="os.tag"
@@ -28,20 +28,20 @@
           <div class="dlg-detail" v-if="selected">
             <p class="detail-heading">OS Details</p>
 
-            <div class="field dlg-field">
+            <div class="field dlg-field" data-tooltip="Unique identifier used in XML output and item OS mappings">
               <label class="field-lbl">Tag *</label>
               <input class="field-inp" :value="selected.tag" @input="updateSelected('tag', ($event.target as HTMLInputElement).value)" />
             </div>
-            <div class="field dlg-field">
+            <div class="field dlg-field" data-tooltip="Display name shown in the OS list and PDF reports">
               <label class="field-lbl">Name *</label>
               <input class="field-inp" :value="selected.name" @input="updateSelected('name', ($event.target as HTMLInputElement).value)" />
             </div>
-            <div class="field dlg-field">
+            <div class="field dlg-field" data-tooltip="Short label shown in the OS mapping table. Auto-derived from the name if left empty">
               <label class="field-lbl">Abbreviation (auto-derived if empty)</label>
               <input class="field-inp" :value="selected.abbreviation" @input="updateSelected('abbreviation', ($event.target as HTMLInputElement).value)" :placeholder="derivedAbbrev" />
             </div>
 
-            <label class="server-os-label">
+            <label class="server-os-label" data-tooltip="Mark this as a server edition operating system">
               <input type="checkbox" :checked="selected.isServerOs" @change="updateSelected('isServerOs', ($event.target as HTMLInputElement).checked)" />
               Server OS
             </label>
@@ -50,16 +50,16 @@
               <div class="build-hdr">
                 <span class="build-title">Build</span>
                 <div>
-                  <button class="dlg-btn small" @click="addBuild">Add</button>
-                  <button class="dlg-btn small danger" :disabled="selectedBuildIdx === null" @click="removeBuild">Remove</button>
+                  <button class="dlg-btn small" data-tooltip="Add a build number entry" @click="addBuild">Add</button>
+                  <button class="dlg-btn small danger" :disabled="selectedBuildIdx === null" data-tooltip="Remove the selected build entry" @click="removeBuild">Remove</button>
                 </div>
               </div>
               <div class="build-list">
-                <div class="build-col-hdr">BuildStartsWith</div>
+                <div class="build-col-hdr" data-tooltip="Windows build number, or the starting digits of the build number (e.g. 19041 or 220)">BuildStartsWith</div>
                 <div v-for="(b, i) in selected.buildStartsWith" :key="i"
                   class="build-row" :class="{ active: selectedBuildIdx === i }"
                   @click="selectedBuildIdx = i">
-                  <input class="build-inp" :value="b" @input="updateBuild(i, ($event.target as HTMLInputElement).value)" @click.stop />
+                  <input class="build-inp" inputmode="numeric" data-tooltip="Windows build number, or the starting digits of the build number (e.g. 19041 or 220)" :value="b" @input="updateBuild(i, ($event.target as HTMLInputElement).value)" @click.stop />
                 </div>
               </div>
             </div>
@@ -68,8 +68,8 @@
         </div>
 
         <div class="dlg-footer">
-          <button class="dlg-btn" @click="onCancel">Cancel</button>
-          <button class="dlg-btn primary" @click="onSave">Save</button>
+          <button class="dlg-btn" data-tooltip="Discard changes and close" @click="onCancel">Cancel</button>
+          <button class="dlg-btn primary" data-tooltip="Save all operating system changes" @click="onSave">Save</button>
         </div>
       </div>
     </div>
@@ -110,6 +110,7 @@ const derivedAbbrev = computed(() => {
 function updateSelected(field: keyof OsDefinition, value: unknown) {
   if (!selected.value) return
   ;(selected.value as any)[field] = value
+  if (field === 'tag') selectedTag.value = value as string
 }
 
 function addBuild() {
@@ -125,7 +126,10 @@ function removeBuild() {
 
 function updateBuild(i: number, value: string) {
   if (!selected.value) return
-  selected.value.buildStartsWith[i] = value
+  const numeric = value.replace(/\D/g, '')
+  selected.value.buildStartsWith[i] = numeric
+  const el = document.activeElement as HTMLInputElement | null
+  if (el && el.value !== numeric) el.value = numeric
 }
 
 function onAddOs() {
@@ -170,10 +174,10 @@ function onCancel() {
 <style scoped>
 .dialog-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; }
 .dialog { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; width: 780px; max-width: 95vw; max-height: 85vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
-.dlg-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid var(--card-border); }
+.dlg-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid var(--card-border); position: relative; z-index: 0; }
 .dlg-title { font-size: 14px; font-weight: 700; color: var(--bc-name); }
 .dlg-close { background: none; border: none; color: var(--field-label); font-size: 20px; cursor: pointer; line-height: 1; }
-.dlg-body { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+.dlg-body { display: flex; flex: 1; overflow: visible; min-height: 0; }
 .dlg-list { width: 260px; flex-shrink: 0; border-right: 1px solid var(--card-border); display: flex; flex-direction: column; }
 .dlg-list-actions { display: flex; gap: 8px; padding: 12px; border-bottom: 1px solid var(--card-border); }
 .os-list-items { flex: 1; overflow-y: auto; }
@@ -182,7 +186,7 @@ function onCancel() {
 .os-list-item.active { background: var(--item-active); border-left: 2px solid var(--item-bar); }
 .osli-name { font-size: 12px; font-weight: 600; color: var(--item-name); }
 .osli-tag { font-size: 10px; color: var(--field-label); margin-top: 2px; }
-.dlg-detail { flex: 1; padding: 16px 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+.dlg-detail { flex: 1; padding: 16px 20px; overflow: visible; display: flex; flex-direction: column; gap: 10px; }
 .dlg-empty { align-items: center; justify-content: center; color: var(--field-label); font-size: 12px; }
 .detail-heading { font-size: 13px; font-weight: 700; color: var(--bc-name); margin-bottom: 4px; }
 .dlg-field { border: 1px solid var(--field-border); border-radius: 6px; background: var(--field-bg); padding: 17px 10px 5px; position: relative; }

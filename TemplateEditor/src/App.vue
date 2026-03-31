@@ -35,10 +35,6 @@ const fileInput = ref<HTMLInputElement | null>(null)
 const showOsDialog = ref(false)
 const showPdfDialog = ref(false)
 
-onMounted(() => {
-  documentStore.load({ supportedOs: [], items: [] }, 'new-template.xml')
-})
-
 async function onNew() {
   if (documentStore.dirty && !confirm('Discard unsaved changes?')) return
   try {

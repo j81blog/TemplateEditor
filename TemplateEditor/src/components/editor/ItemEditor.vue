@@ -96,8 +96,8 @@
           @keydown.enter="confirmAddCat" @keydown.escape="showCatDialog = false" />
         <div v-if="catError" class="dlg-error">{{ catError }}</div>
         <div class="dlg-actions">
-          <button class="dlg-btn secondary" @click="showCatDialog = false">Cancel</button>
-          <button class="dlg-btn primary" @click="confirmAddCat">Add</button>
+          <button class="dlg-btn secondary" data-tooltip="Cancel and close" @click="showCatDialog = false">Cancel</button>
+          <button class="dlg-btn primary" data-tooltip="Add the new category" @click="confirmAddCat">Add</button>
         </div>
       </div>
     </div>
