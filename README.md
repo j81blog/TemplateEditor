@@ -31,7 +31,7 @@ To open your own file, click **Open…** and select a `.xml` template from your 
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│  Toolbar                                                  │
+│  Toolbar                                                 │
 ├──────────────┬───────────────────────────────────────────┤
 │              │                                           │
 │  Sidebar     │  Item editor                              │
